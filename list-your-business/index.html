@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>List your Business | Searchinger.co.uk</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="" type="image/x-icon"  sizes="16x16" />
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <script src="../assets/js/custom.js" type="javascript"></script>
+    <script src="../assets/js/jquery.min.js" type="javascript"></script>
+    <script src="../assets/js/bootstrap.min.js" type="javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="description" content="" />
+    <meta name="abstract" content=" "> 
+    <meta name="subject" content=""> 
+    <meta itemscope itemtype="http://schema.org/WebSite" itemref="sitename sitelink facebook twitter">
+    <meta itemprop="name" content="Searchinger" id="sitename">
+    <link href="https://searchinger.co.uk" itemprop="url" id="sitelink">
+    <meta name="og:site_name" content="searchinger.co.uk">
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" /><meta property="og:image" content=""/>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@Searchinger" />
+    <meta name="twitter:title" content="Searchinger | UK's Largest Business Directory Engine" />
+    <meta name="twitter:description" content="Searchinger | UK's Largest Business Directory Engine" /><meta name="twitter:image" content="" /> 
+    <link rel="canonical" href="https://searchinger.co.uk" />
+    
+</head>
+<body>
+<nav class="sng-navigation navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+          <a class="navbar-brand" href="../index.html"><span>Search</span>inger</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown sng-dropdown">
+              <a class="dropdown-toggle custom-arrow"  href="#" >Categories</a>
+              <div class="sng-dropdown-content">
+              
+                </div>
+            </li>
+       
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="./list-your-business/" class="sng-free-business">+ List your Business</a></li>
+            <li><a href="#" class="sng-post-ad">Post Free Ad</a></li>
+          </ul>
+        </div>
+      </div>  
+</nav>
+<section class="sng-list-your-business">
+<div class="container">
+    <h3>You are one step away from listing you business</h3>
+ <div class="sng-listing-form">
+    <div class="form-group d-flex">
+        <img id="businessLogo" class="sng-logo-wrapper" src="#" alt="" />
+        <div class="sn-logo-inp-wrapper">
+            <input type='file' id="bsLogoInput" class="sng-logo-input" />
+           <p class="file-upload-rule">* Maximum file size should be 300kb</p>
+           <p class="file-upload-rule">* File format should be jpg, png</p>
+           <p class="file-upload-rule">* Logo is not a mandatory</p>
+        </div>
+      
+    </div><br>
+    <div class="form-group">
+        <label for="BusinessName">Business Name<sup>*</sup></label>
+        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: UK Travel company" id="bsname">
+      </div><br>
+      <div class="form-group">
+        <label for="BusinessName">Business Email Address<sup>*</sup></label>
+        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: abc@travelcompany.com" id="bsname">
+      </div><br>
+      <div class="form-group">
+        <label for="BusinessName">Business Contact Number<sup>*</sup></label>
+        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: +44 1234567890" id="bsname">
+      </div><br>
+      <div class="form-group">
+        <label for="BusinessName">Business Category<sup>*</sup></label>
+        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: Travel, Architecture" id="bsname">
+      </div><br>
+      <div class="form-group">
+        <label for="BusinessName">Business website<sup>*</sup></label>
+        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: www.xyzcompany.com" id="bsname">
+      </div><br>
+      <div class="form-group">
+        <label for="BusinessName">Business Address<sup>*</sup></label>
+        <textarea type="name" class="form-control sng-form-textarea" required rows="4" value="Eg: London" id="bsaddress">
+        </textarea>
+      </div><br><hr>
+      <div class="form-group sng-social-links">
+        <label for="BusinessName">Social Links of Business</label><br><br>
+
+            <label for="BusinessName">Facebook :&nbsp; </label>
+            <input type="name" class="form-control sng-form-inputs" required placeholder="" id="bsname">       <br>
+           <label for="BusinessName">Twitter :&nbsp; </label>
+            <input type="name" class="form-control sng-form-inputs" required placeholder="" id="bsname"><br>
+            <label for="BusinessName">Google My Business :&nbsp; </label>
+            <input type="name" class="form-control sng-form-inputs" required placeholder="" id="bsname">
+        </div>
+        <button class="sng-submit-btn">Submit Business</button>
+      </div><br>
+
+ </div>   
+</div>
+
+</section>
+
+</body>
+<script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      
+      reader.onload = function(e) {
+        $('#businessLogo').attr('src', e.target.result);
+      }
+      
+      reader.readAsDataURL(input.files[0]); // convert to base64 string
+    }
+  }
+  
+  $("#bsLogoInput").change(function() {
+    readURL(this);
+  });
+</script>
+
+</html>

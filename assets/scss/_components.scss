@@ -1,0 +1,28 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+$base-font: 'Poppins','-apple-system', 'system-ui', "Segoe UI", 'Roboto', "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$primary-color:#ffffff;
+$primary-theme-color:#422967;
+$secondary-color:#F4F5F7;
+$drk-bg-txt-clr:#cbbde2;
+$bg-hover-color:#ffffff;
+$data-table-bg-clr:#dff0ff;
+$sd-ic-clr:#76899d;
+$lgt-bg-txt-clr:#3c4149;
+$button-color:#00D883;
+$sml-btn-bg:rgb(239, 241, 244);
+$nav-height:60px;
+$flex-d-row: row;
+$flex-d-column: column;
+$d-flex:flex;
+
+
+.pad-null 
+{
+    padding:0;
+    margin:0;
+}
+.d-flex
+{
+    display: $d-flex;
+}
