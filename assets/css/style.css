@@ -135,10 +135,10 @@ body {
   text-align: center;
   color: #ffffff;
   font-weight: 600;
-  line-height: 90px;
+  line-height: 80px;
   max-width: 750px;
   margin: 0 auto 40px;
-  font-size: 65px;
+  font-size: 56px;
   text-shadow: 0 0 5px #535151;
 }
 
@@ -199,6 +199,7 @@ body {
 }
 
 .sng-list-your-business .sng-listing-form {
+  background-color: #ffffff;
   max-width: 600px;
   width: 100%;
   margin: 30px auto 40px;
