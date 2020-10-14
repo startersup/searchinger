@@ -40,10 +40,10 @@ font-family: $base-font;
 
                 font-size:14px;
                 letter-spacing: 0.2px;
-                &:hover
-                {
-
-                }
+                line-height:24px;
+                font-weight:400;
+                color:#333333;
+           
 
             }
         }
@@ -278,6 +278,50 @@ position: relative;
         }
     }
     
+}
+
+
+.sng-category
+{
+   padding:50px 0px;
+   
+   .sng-category-wrapper
+   {
+    ul 
+    {
+        display: inline;
+        list-style-type: none;
+        padding:0;
+        margin:0;
+    }
+    li 
+    {
+        display: inline-block;
+         margin:0px 20px;
+         cursor: pointer;
+        .sn-category-card
+        { 
+            width:150px;
+            text-align:center;
+            font-size:15px;
+            padding:10px 30px;
+            border: 1px solid #efefef;
+            box-shadow: rgba(235, 235, 235, 0.5) 0px 0px 6px 2px;
+            img 
+            {
+                max-width:50px;
+                width:100%;
+                margin:0 auto;
+            }
+            p 
+            {
+                margin-top:10px;
+            }
+           
+        }
+    }
+       
+   }
 }
 
 

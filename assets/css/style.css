@@ -51,6 +51,9 @@ body {
 .sng-navigation ul li a {
   font-size: 14px;
   letter-spacing: 0.2px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333333;
 }
 
 .sng-navigation .sng-dropdown:hover .sng-dropdown-content {
@@ -279,6 +282,43 @@ body {
   outline: none;
   display: inline-block;
   cursor: pointer;
+}
+
+.sng-category {
+  padding: 50px 0px;
+}
+
+.sng-category .sng-category-wrapper ul {
+  display: inline;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sng-category .sng-category-wrapper li {
+  display: inline-block;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+
+.sng-category .sng-category-wrapper li .sn-category-card {
+  width: 150px;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 30px;
+  border: 1px solid #efefef;
+  -webkit-box-shadow: rgba(235, 235, 235, 0.5) 0px 0px 6px 2px;
+          box-shadow: rgba(235, 235, 235, 0.5) 0px 0px 6px 2px;
+}
+
+.sng-category .sng-category-wrapper li .sn-category-card img {
+  max-width: 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sng-category .sng-category-wrapper li .sn-category-card p {
+  margin-top: 10px;
 }
 
 @media only screen and (max-width: 780px) and (min-width: 500px) {
