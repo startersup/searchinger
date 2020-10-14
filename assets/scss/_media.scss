@@ -1,0 +1,44 @@
+@media only screen and (max-width: 780px) and (min-width: 500px)
+ {
+    .sng-controls
+    {
+        font-size:13px !important;
+    }
+    .sng-find-business
+    {
+        padding: 14px 20px !important;
+        margin-top: 5px !important;
+        width: 100%;
+        max-width: 244px !important;
+        background-color: #422967;
+        outline: none;
+        border: none;
+        color: #ffffff !important;
+    }
+ }
+@media only screen and (max-width: 500px) {
+    .sng-banner-section
+    {
+        height:300px !important;
+  .sng-banner-wrapper
+  {
+  h1
+  {
+    line-height: 46px !important;
+    font-size: 28px !important;
+  }
+  .sng-controls
+  {
+      border-bottom:1px solid #cccccc !important;
+      padding:20px 10px 20px 50px !important;
+      margin:0 !important;
+  }
+  .sng-find-business
+  {
+      margin:0;width:100%;
+      max-width:500px;
+  }
+  }
+  
+}
+}

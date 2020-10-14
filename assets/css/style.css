@@ -144,9 +144,9 @@ body {
 
 .sng-banner-section .sng-banner-wrapper .sng-highligher {
   background-color: #fff;
-  border: 1px solid #422967;
+  border: 1px solid #adacaf;
   -webkit-box-shadow: 0px 0px 0px 4px rgba(24, 104, 251, 0.2);
-  box-shadow: 0px 0px 0px 4px rgba(24, 104, 251, 0.2);
+  box-shadow: 0px 0px 0px 4px #ebe8ec33;
 }
 
 .sng-banner-section .sng-banner-wrapper .sng-search-wrapper {
@@ -279,5 +279,41 @@ body {
   outline: none;
   display: inline-block;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 780px) and (min-width: 500px) {
+  .sng-controls {
+    font-size: 13px !important;
+  }
+  .sng-find-business {
+    padding: 14px 20px !important;
+    margin-top: 5px !important;
+    width: 100%;
+    max-width: 244px !important;
+    background-color: #422967;
+    outline: none;
+    border: none;
+    color: #ffffff !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sng-banner-section {
+    height: 300px !important;
+  }
+  .sng-banner-section .sng-banner-wrapper h1 {
+    line-height: 46px !important;
+    font-size: 28px !important;
+  }
+  .sng-banner-section .sng-banner-wrapper .sng-controls {
+    border-bottom: 1px solid #cccccc !important;
+    padding: 20px 10px 20px 50px !important;
+    margin: 0 !important;
+  }
+  .sng-banner-section .sng-banner-wrapper .sng-find-business {
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
