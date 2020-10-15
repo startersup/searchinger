@@ -63,55 +63,62 @@
 <section class="sng-list-your-business">
 <div class="container">
     <h3>You are one step away from listing you business</h3>
+    <form class="formSubmit" id="businessList" method="post" enctype="multipart/form-data">
  <div class="sng-listing-form">
     <label for="BusinessName">Company Logo</label>
     <div class="form-group d-flex">
         <img id="businessLogo" class="sng-logo-wrapper" onerror="this.onerror=null; this.src='../assets/images/sng-alt-img.png'" src="#" alt="" />
         <div class="sn-logo-inp-wrapper">
-            <input type='file' id="bsLogoInput" class="sng-logo-input" />
+            <input type='file' name="image" id="bsLogoInput" class="sng-logo-input" />
            <p class="file-upload-rule">* Maximum file size should be 300kb</p>
            <p class="file-upload-rule">* File format should be jpg, png</p>
            <p class="file-upload-rule">* Logo is not a mandatory</p>
         </div>
       
     </div><br>
+    
     <div class="form-group">
         <label for="BusinessName">Business Name<sup>*</sup></label>
-        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: UK Travel company" id="bsname">
+        <input type="name" name="bussiName" class="form-control sng-form-inputs" required placeholder="Eg: UK Travel company" id="bsname">
       </div><br>
       <div class="form-group">
         <label for="BusinessName">Business Email Address<sup>*</sup></label>
-        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: abc@travelcompany.com" id="bsname">
+        <input type="name" name="businessMail" class="form-control sng-form-inputs" required placeholder="Eg: abc@travelcompany.com" id="bsname">
       </div><br>
       <div class="form-group">
         <label for="BusinessName">Business Contact Number<sup>*</sup></label>
-        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: +44 1234567890" id="bsname">
+        <input type="name" name="contactNumber" class="form-control sng-form-inputs" required placeholder="Eg: +44 1234567890" id="bsname">
       </div><br>
       <div class="form-group">
         <label for="BusinessName">Business Category<sup>*</sup></label>
-        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: Travel, Architecture" id="bsname">
+        <input type="name" name="businessCategory" class="form-control sng-form-inputs" required placeholder="Eg: Travel, Architecture" id="businessCategory">
       </div><br>
       <div class="form-group">
         <label for="BusinessName">Business website<sup>*</sup></label>
-        <input type="name" class="form-control sng-form-inputs" required placeholder="Eg: www.xyzcompany.com" id="bsname">
+        <input type="name" name="businessWebsite"  class="form-control sng-form-inputs" required placeholder="Eg: www.xyzcompany.com" id="bsname">
       </div><br>
       <div class="form-group">
         <label for="BusinessName">Business Address<sup>*</sup></label>
-        <textarea type="name" class="form-control sng-form-textarea" required rows="4" value="Eg: London" id="bsaddress">
+        <textarea type="name" name="businessAddress" class="form-control sng-form-textarea" required rows="4" value="Eg: London" id="bsaddress">
         </textarea>
       </div><br><hr>
       <div class="form-group sng-social-links">
         <label for="BusinessName">Social Links of Business</label><br><br>
 
             <label for="BusinessName">Facebook :&nbsp; </label>
-            <input type="name" class="form-control sng-form-inputs" required placeholder="" id="bsname">       <br>
+            <input type="name" name="facebookLink" class="form-control sng-form-inputs" required placeholder="" id="bsname">       <br>
            <label for="BusinessName">Twitter :&nbsp; </label>
-            <input type="name" class="form-control sng-form-inputs" required placeholder="" id="bsname"><br>
+            <input type="name" name="twitterLink" class="form-control sng-form-inputs" required placeholder="" id="bsname"><br>
             <label for="BusinessName">Google My Business :&nbsp; </label>
-            <input type="name" class="form-control sng-form-inputs" required placeholder="" id="bsname">
+            <input type="name" name="googleBusinessLink" class="form-control sng-form-inputs" required placeholder="" id="bsname">
         </div>
+
         <button class="sng-submit-btn">Submit Business</button>
+
+
       </div><br>
+
+    </form>
 
  </div>   
 </div>
