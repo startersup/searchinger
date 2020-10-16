@@ -162,6 +162,20 @@ position: relative;
     box-sizing: border-box;
     outline: none;
  }
+ .sng-textarea-controls
+ {
+    width: 100%;
+    padding: 10px 10px 10px 50px;
+    border: none;
+    margin: 8px 0px;
+    color: #000000 !important;
+    font-size: 15px;
+    font-family: $base-font;
+    border-right:1px solid #cccccc;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+ }
  .sng-float-icon
 {
     position: absolute;
