@@ -77,7 +77,7 @@ if ($result) {
         if($result_image_Upload)
         {
             $image_id = $conn->insert_id;
-            $update_image_sql "UPDATE `bussinessList` SET `logoUrl`='$image_id' WHERE `id` = ".$last_id;
+            $update_image_sql ="UPDATE `bussinessList` SET `logoUrl`='$image_id' WHERE `id` = ".$last_id;
             $response["update_image_sql"] = $update_image_sql;
         $result_image_Update=  mysqli_query($conn, $update_image_sql);
         if($result_image_Update)
@@ -91,3 +91,5 @@ if ($result) {
 }
 
 echo json_encode($response);
+
+?>
