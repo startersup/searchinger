@@ -1,6 +1,8 @@
 
-
-$(document).on('click', '.formSubmit', function () {
+var myProtocol = window.location.protocol;
+var mySite = window.location.host;
+var myUrl = myProtocol + "//" + mySite + "/";
+$(document).on('click', '.formSubmit123', function () {
     var data = {};
     var apidata = {};
  
@@ -20,7 +22,23 @@ $(document).on('click', '.formSubmit', function () {
     }
 
 });
+$(document).on('keyup', '.number', function () {
 
+  var ele = $(this).val();
+  var wnum = $(this).attr("whole");
+  var dnum = $(this).attr("decimal");
+  if (dnum == "0") {
+    var regex = new RegExp("^\\d{0," + wnum + "}?$");
+    if (!regex.test($(this).val())) {
+      $(this).val( $(this).val().substring(0, $(this).val().length - 1) );
+    }
+  } else {
+    var regex = new RegExp("^\\d{0," + wnum + "}(\\.\\d{0," + dnum + "})?$");
+    if (!regex.test($(this).val())) {
+      $(this).val( $(this).val().substring(0, $(this).val().length - 1) );
+    }
+  }
+});
 function get_url_response(callType, url, data, func) {
     $.ajax({
       type: callType,
@@ -39,12 +57,12 @@ function get_url_response(callType, url, data, func) {
   }
 
 
-  $("form#files").submit(function(){
+  $("form#businessList").submit(function(){
 
     var formData = new FormData($(this)[0]);
-
+    var Url = myUrl+'apis/v1/business/';
     $.ajax({
-        url: window.location.pathname,
+        url: Url,
         type: 'POST',
         data: formData,
         async: false,
@@ -58,3 +76,7 @@ function get_url_response(callType, url, data, func) {
 
     return false;
 });
+
+
+
+
