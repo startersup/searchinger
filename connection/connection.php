@@ -7,5 +7,7 @@ if( !$conn)
     $response["status"]=false;
     $response["msg"]="DB Error...!!!!!";
     echo json_encode($response);
+}else{
+    echo('suc');
 }
 ?>
