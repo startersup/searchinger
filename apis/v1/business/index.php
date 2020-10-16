@@ -60,8 +60,14 @@ if ($result) {
     $fileToUpload = "fileToUpload";
 
     $target_file_temp = $target_dir . basename($_FILES[$fileToUpload]["name"]);
+    $response["target_file_temp"] = $target_file_temp;
+
+    
     $target_file =$target_file.strtolower(pathinfo($target_file_temp,PATHINFO_EXTENSION));
     $target_file_url = $target_file_url .strtolower(pathinfo($target_file_temp,PATHINFO_EXTENSION));
+
+    $response["Extn"] = strtolower(pathinfo($target_file_temp,PATHINFO_EXTENSION));
+
     include($rootfolder.'/apis/v1/operation/fileUpload.php');
 
     if($response["status"] == 0)
