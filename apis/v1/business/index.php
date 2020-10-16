@@ -25,9 +25,10 @@ $link = "https";
 else
 $link = "http"; 
 
-  $path=$link."://". $_SERVER['HTTP_HOST']."/";
+$path=$link."://". $_SERVER['HTTP_HOST']."/";
 
 include("./connection/connection.php");
+
 $image = $_POST["image"];
 $bussiName = $_POST["bussiName"];
 $businessMail = $_POST["businessMail"];
@@ -44,7 +45,8 @@ $googleBusinessLink = $_POST["googleBusinessLink"];
 $sql = "INSERT INTO `bussinessList` ( `businessName`, `businessMail`, `contactNumber`, `businessCategory`, `businessDescription`, `businessWebsite`, `businessAddress`, `facebookLink`, `twitterLink`, `googleBusinessLink`,  `googleReviews`, `overAllReviews`,  `businessAbout`)  VALUES ( '$bussiName', '$businessMail', '$contactNumber', '$businessCategory', '$businessDescription', '$businessWebsite', '$businessAddress', '$facebookLink', '$twitterLink', '$googleBusinessLink', '$googleReviews', '$googleReviews', '')";
 
 $response["sql"] = $sql;
-
+if($conn)
+{
 $result =  mysqli_query($conn, $sql);
 if ($result) {
     $last_id = $conn->insert_id;
@@ -90,6 +92,10 @@ if ($result) {
 }
 else{
     $response["msg"] = "First Insert Fail .... ".$conn;
+}
+
+}else{
+    $response["conn"] = "Connectio Failed .... ";
 }
 echo json_encode($response);
 
