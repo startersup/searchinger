@@ -10,9 +10,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <link href="../assets/css/style.css" rel="stylesheet">
-    <script src="../assets/js/custom.js" type="javascript"></script>
+
     <script src="../assets/js/jquery.min.js" type="javascript"></script>
     <script src="../assets/js/bootstrap.min.js" type="javascript"></script>
+    
+    <script src="http://searchinger.co.uk/assets/js/custom.js" type="javascript"></script>
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="description" content="" />
     <meta name="abstract" content=" "> 
@@ -29,7 +32,7 @@
     <meta name="twitter:title" content="Searchinger | UK's Largest Business Directory Engine" />
     <meta name="twitter:description" content="Searchinger | UK's Largest Business Directory Engine" /><meta name="twitter:image" content="" /> 
     <link rel="canonical" href="https://searchinger.co.uk" />
-    
+
 </head>
 <body style="background:#f2f3f7;">
 <nav class="sng-navigation navbar navbar-default navbar-fixed-top">
@@ -69,7 +72,7 @@
     <div class="form-group d-flex">
         <img id="businessLogo" class="sng-logo-wrapper" onerror="this.onerror=null; this.src='../assets/images/sng-alt-img.png'" src="#" alt="" />
         <div class="sn-logo-inp-wrapper">
-            <input type='file' name="image" id="bsLogoInput" class="sng-logo-input" />
+            <input type='file' name="fileToUpload" id="fileToUpload" class="sng-logo-input" />
            <p class="file-upload-rule">* Maximum file size should be 300kb</p>
            <p class="file-upload-rule">* File format should be jpg, png</p>
            <p class="file-upload-rule">* Logo is not a mandatory</p>
@@ -106,6 +109,10 @@
         <label for="BusinessName">Business Address<sup>*</sup></label>
         <textarea type="name" name="businessAddress" class="form-control sng-form-textarea" required rows="4" value="Eg: London" id="bsaddress">
         </textarea>
+      </div><br>
+      <div class="form-group">
+        <label for="BusinessName">Google Reviews<sup>*</sup></label>
+        <input type="name" name="googleReviews"  class="form-control sng-form-inputs number" whole="1" decimal="1" required placeholder="Eg: www.xyzcompany.com" id="bsname">
       </div><br><hr>
       <div class="form-group sng-social-links">
         <label for="BusinessName">Social Links of Business</label><br><br>
