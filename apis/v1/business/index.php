@@ -89,7 +89,7 @@ if ($result) {
     
 }
 else{
-    $response["msg"] = "First Insert Fail .... "+$conn;
+    $response["msg"] = "First Insert Fail .... ".$conn;
 }
 echo json_encode($response);
 
