@@ -58,7 +58,7 @@ function get_url_response(callType, url, data, func) {
 
 
  // $("form#").submit(function(){
-    $("body").on("submit", "#businessList", function(e){
+  $(document).on("submit", "#businessList", function(){
     var formData = new FormData($(this)[0]);
     var Url = myUrl+'apis/v1/business/';
     $.ajax({
