@@ -27,7 +27,7 @@ $link = "http";
 
 $path=$link."://". $_SERVER['HTTP_HOST']."/";
 
-include("./connection/connection.php");
+$response["include"] = include("./connection/connection.php");
 
 $image = $_POST["image"];
 $bussiName = $_POST["bussiName"];
