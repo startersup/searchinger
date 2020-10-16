@@ -27,7 +27,7 @@ $link = "http";
 
 $path=$link."://". $_SERVER['HTTP_HOST']."/";
 
-$response["include"] = include($rootfolder.'/connection/connection.php');
+include($rootfolder.'/connection/connection.php');
 
 $image = $_POST["image"];
 $bussiName = $_POST["bussiName"];
@@ -62,7 +62,7 @@ if ($result) {
     $target_file_temp = $target_dir . basename($_FILES[$fileToUpload]["name"]);
     $target_file =$target_file.strtolower(pathinfo($target_file_temp,PATHINFO_EXTENSION));
     $target_file_url = $target_file_url .strtolower(pathinfo($target_file_temp,PATHINFO_EXTENSION));
-    include('./apis/v1/operation/fileUpload.php');
+    include($rootfolder.'/apis/v1/operation/fileUpload.php');
 
     if($response["status"] == 0)
     {
