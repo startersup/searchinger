@@ -59,7 +59,7 @@ if ($result) {
     $maxSize = 300000;
     $fileToUpload = "fileToUpload";
 
-    $target_file_temp = $target_dir . basename($_FILES[$fileToUpload]["name"]);
+    $target_file_temp =  basename($_FILES[$fileToUpload]["name"]);
     $response["target_file_temp"] = $target_file_temp;
 
     

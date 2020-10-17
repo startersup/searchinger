@@ -69,6 +69,7 @@ function get_url_response(callType, url, data, func) {
         success: function (data) {
             alert(data)
         },
+        enctype: 'multipart/form-data',
         cache: false,
         contentType: false,
         processData: false
