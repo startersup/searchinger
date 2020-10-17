@@ -48,9 +48,9 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
   if (move_uploaded_file($_FILES[$fileToUpload]["tmp_name"], $target_file)) {
-    $response["msg"] =  "The file ". htmlspecialchars( basename( $_FILES[$fileToUpload]["name"])). " has been uploaded.";
+    $response["msg_image"] =  "The file ". htmlspecialchars( basename( $_FILES[$fileToUpload]["name"])). " has been uploaded.";
   } else {
-    $response["msg"] =  "Sorry, there was an error uploading your file.";
+    $response["msg_image"] =  "Sorry, there was an error uploading your file.";
   }
 }
 
