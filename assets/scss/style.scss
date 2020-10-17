@@ -12,6 +12,13 @@ font-family: $base-font;
     padding: .5rem 1rem;
     background-color:$primary-color;
     height:$nav-height;
+
+    .sng-logo
+    {
+    max-width:30px;
+    width:100%;
+    margin-top:-5px;
+    }
     
 .navbar-brand
 {
@@ -519,5 +526,21 @@ a
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.sng-footer
+{
+    background-color:#bfcbe6;
+    padding:20px;   
+}
 
 @import './media';

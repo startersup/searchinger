@@ -77,6 +77,12 @@ body {
   height: 60px;
 }
 
+.sng-navigation .sng-logo {
+  max-width: 30px;
+  width: 100%;
+  margin-top: -5px;
+}
+
 .sng-navigation .navbar-brand {
   font-size: 22px;
   font-weight: 700;
@@ -548,6 +554,11 @@ body {
 .sng-results .sng-result-card .sng-social-bar .fa:hover {
   background-color: #ff7e00;
   color: #ffffff;
+}
+
+.sng-footer {
+  background-color: #bfcbe6;
+  padding: 20px;
 }
 
 @media only screen and (max-width: 780px) and (min-width: 500px) {
