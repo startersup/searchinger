@@ -201,6 +201,33 @@ position: relative;
 }
 
 }
+.sng-features
+{
+    margin-top:40px;
+    padding:60px 0px;
+    
+    .sng-feature-images
+    {
+
+        max-width:500px;
+        width:100%;
+    }
+    h3 
+    {
+        color:#000000;
+        font-size:35px;
+        font-weight:700;
+        line-height: 48px;
+        letter-spacing: 0.3px;
+    }
+    p 
+    {
+        font-size:16px;
+        line-height:27px;
+        color:#444444;
+        letter-spacing: 0.5px;
+    }
+}
 
 
 .sng-list-your-business

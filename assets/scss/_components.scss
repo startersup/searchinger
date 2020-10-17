@@ -31,3 +31,24 @@ $d-flex:flex;
 {
     background-color:#000000;
 }
+
+.promote-btn
+{
+    margin-top:20px;
+    padding:10px 30px;
+    background-color:$primary-theme-color;
+    border:none;
+    border-radius:3px;
+    font-size:18px;
+    cursor: pointer;
+    a 
+    {
+        text-decoration: none;
+        color:#ffffff;
+    }
+
+    &:hover
+    {
+        box-shadow: 0 12px 22px 0 #dbc1fe;
+    }
+}
