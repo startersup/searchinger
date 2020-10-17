@@ -9,6 +9,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .bg-black {
@@ -164,6 +166,20 @@ body {
   width: 100%;
   padding: 10px 10px 10px 50px;
   min-height: 40px;
+  border: none;
+  margin: 8px 0px;
+  color: #000000 !important;
+  font-size: 15px;
+  font-family: "Poppins", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  border-right: 1px solid #cccccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.sng-banner-section .sng-banner-wrapper .sng-search-wrapper .sng-textarea-controls {
+  width: 100%;
+  padding: 10px 10px 10px 50px;
   border: none;
   margin: 8px 0px;
   color: #000000 !important;

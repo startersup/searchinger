@@ -25,6 +25,7 @@ $d-flex:flex;
 .d-flex
 {
     display: $d-flex;
+    flex-wrap: wrap;
 }
 .bg-black
 {
