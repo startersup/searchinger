@@ -166,8 +166,7 @@ $(document).on('click', '.loadDropdown_class_p', function () {
       $(this).html(temp);
     }
 
-  })
-  $('#drvid').val($(this).html());
-  $('.drvid_class_div').remove();
-
+  });
+ 
+  $('.loadDropdown_div').remove();
 });
