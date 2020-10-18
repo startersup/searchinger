@@ -118,7 +118,7 @@ $(document).on("submit", "#businessList", function () {
 });
 
 
-$(document).on('keyup', '.loadDropdown', function () {
+$(document).on('focus', '.loadDropdown', function () {
 
   var dropDownType = $(this).attr("drop-type");
 
