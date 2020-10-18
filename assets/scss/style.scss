@@ -12,6 +12,13 @@ font-family: $base-font;
     padding: .5rem 1rem;
     background-color:$primary-color;
     height:$nav-height;
+
+    .sng-logo
+    {
+    max-width:30px;
+    width:100%;
+    margin-top:-5px;
+    }
     
 .navbar-brand
 {
@@ -196,9 +203,37 @@ position: relative;
     outline: none;
     border: none;
     color: #ffffff !important;
+    font-family: $base-font;
 }
 }
 
+}
+.sng-features
+{
+    margin-top:40px;
+    padding:60px 0px;
+    
+    .sng-feature-images
+    {
+
+        max-width:500px;
+        width:100%;
+    }
+    h3 
+    {
+        color:#000000;
+        font-size:35px;
+        font-weight:700;
+        line-height: 48px;
+        letter-spacing: 0.3px;
+    }
+    p 
+    {
+        font-size:16px;
+        line-height:27px;
+        color:#444444;
+        letter-spacing: 0.5px;
+    }
 }
 
 
@@ -215,12 +250,12 @@ position: relative;
     .sng-listing-form
     {
         background-color:#ffffff;
-        max-width:600px;
+        max-width:750px;
         width:100%;
-        margin:30px auto 40px;
+        margin:20px auto;
         box-shadow: 0 1px 5px 3px rgba(46,50,52,0.1);
         border-radius: .25rem;
-        padding:20px;
+        padding:30px;
         label 
         {
             font-weight: 600;
@@ -267,8 +302,8 @@ position: relative;
         {
             width: 180px;
             height: 180px;
-            margin: 0 auto;
-            border-radius: 50%;
+            margin-right:40px;
+            margin-top:10px;
             overflow: hidden;
             display: inline-block;
             padding: 0;
@@ -289,6 +324,48 @@ position: relative;
             outline:none;
             display: inline-block;
             cursor: pointer;
+        }
+        
+        .sng-next-btn
+        {
+            background:$primary-theme-color;
+            border-radius: 3px;
+            margin-top: 10px;
+            border:none;
+            padding: 10px 20px 10px;
+            font-size: 13px;
+            color: #fff !important;
+            margin-top: 3px;
+            outline:none;
+            display: inline-block;
+            cursor: pointer; 
+        }
+        .sng-working-hrs
+        {
+            background-color:#f6f7f8;
+            width:100%;
+
+            th 
+            {
+                border: 1px solid #dee4ea;
+                padding:10px 15px;
+                font-size:14px;
+                font-weight:600;
+            }
+            td 
+            {
+                background-color:#ffffff;
+                border: 1px solid #dee4ea;
+                padding:10px 15px;
+                font-size:14px;
+                font-weight:600;
+                
+                select
+                {
+                    border:1px solid #dee4ea;
+                    outline:none;
+                }
+            }
         }
     }
     
@@ -449,5 +526,21 @@ a
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+.sng-footer
+{
+    background-color:#bfcbe6;
+    padding:20px;   
+}
 
 @import './media';

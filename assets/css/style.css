@@ -9,10 +9,32 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .bg-black {
   background-color: #000000;
+}
+
+.promote-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: #422967;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.promote-btn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.promote-btn:hover {
+  -webkit-box-shadow: 0 12px 22px 0 #dbc1fe;
+          box-shadow: 0 12px 22px 0 #dbc1fe;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
@@ -22,6 +44,24 @@
 
 .navbar-default .navbar-nav > li > a {
   color: none !important;
+}
+
+.has-error .form-control {
+  border-color: #a94442 !important;
+}
+
+.btn-primary {
+  background: #ff7e00 !important;
+  border-radius: 3px;
+  margin-top: 10px;
+  padding: 10px 20px 10px;
+  font-size: 13px;
+  color: #fff !important;
+  margin-top: 3px;
+  border: 1px solid #ccc;
+  outline: none !important;
+  display: inline-block;
+  cursor: pointer;
 }
 
 body {
@@ -35,6 +75,12 @@ body {
   padding: .5rem 1rem;
   background-color: #ffffff;
   height: 60px;
+}
+
+.sng-navigation .sng-logo {
+  max-width: 30px;
+  width: 100%;
+  margin-top: -5px;
 }
 
 .sng-navigation .navbar-brand {
@@ -175,6 +221,20 @@ body {
   outline: none;
 }
 
+.sng-banner-section .sng-banner-wrapper .sng-search-wrapper .sng-textarea-controls {
+  width: 100%;
+  padding: 10px 10px 10px 50px;
+  border: none;
+  margin: 8px 0px;
+  color: #000000 !important;
+  font-size: 15px;
+  font-family: "Poppins", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  border-right: 1px solid #cccccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
 .sng-banner-section .sng-banner-wrapper .sng-search-wrapper .sng-float-icon {
   position: absolute;
   left: 15px;
@@ -192,6 +252,32 @@ body {
   outline: none;
   border: none;
   color: #ffffff !important;
+  font-family: "Poppins", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.sng-features {
+  margin-top: 40px;
+  padding: 60px 0px;
+}
+
+.sng-features .sng-feature-images {
+  max-width: 500px;
+  width: 100%;
+}
+
+.sng-features h3 {
+  color: #000000;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.3px;
+}
+
+.sng-features p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #444444;
+  letter-spacing: 0.5px;
 }
 
 .sng-list-your-business {
@@ -207,13 +293,13 @@ body {
 
 .sng-list-your-business .sng-listing-form {
   background-color: #ffffff;
-  max-width: 600px;
+  max-width: 750px;
   width: 100%;
-  margin: 30px auto 40px;
+  margin: 20px auto;
   -webkit-box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
           box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
   border-radius: .25rem;
-  padding: 20px;
+  padding: 30px;
 }
 
 .sng-list-your-business .sng-listing-form label {
@@ -263,8 +349,8 @@ body {
 .sng-list-your-business .sng-listing-form .sng-logo-wrapper {
   width: 180px;
   height: 180px;
-  margin: 0 auto;
-  border-radius: 50%;
+  margin-right: 40px;
+  margin-top: 10px;
   overflow: hidden;
   display: inline-block;
   padding: 0;
@@ -286,6 +372,45 @@ body {
   outline: none;
   display: inline-block;
   cursor: pointer;
+}
+
+.sng-list-your-business .sng-listing-form .sng-next-btn {
+  background: #422967;
+  border-radius: 3px;
+  margin-top: 10px;
+  border: none;
+  padding: 10px 20px 10px;
+  font-size: 13px;
+  color: #fff !important;
+  margin-top: 3px;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.sng-list-your-business .sng-listing-form .sng-working-hrs {
+  background-color: #f6f7f8;
+  width: 100%;
+}
+
+.sng-list-your-business .sng-listing-form .sng-working-hrs th {
+  border: 1px solid #dee4ea;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sng-list-your-business .sng-listing-form .sng-working-hrs td {
+  background-color: #ffffff;
+  border: 1px solid #dee4ea;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sng-list-your-business .sng-listing-form .sng-working-hrs td select {
+  border: 1px solid #dee4ea;
+  outline: none;
 }
 
 .sng-category {
@@ -429,6 +554,11 @@ body {
 .sng-results .sng-result-card .sng-social-bar .fa:hover {
   background-color: #ff7e00;
   color: #ffffff;
+}
+
+.sng-footer {
+  background-color: #bfcbe6;
+  padding: 20px;
 }
 
 @media only screen and (max-width: 780px) and (min-width: 500px) {
