@@ -126,7 +126,7 @@ $(document).on('keyup', '.loadDropdown', function () {
   var temp2 = loadDropDownDiv(dropDownType, 'a');
   temp = temp + temp2 + '</div>';
   $('.loadDropdown_div').remove();
-  $('#drvid').parent().append(temp);
+  $(this).parent().append(temp);
 });
 
 function loadDropDownDiv(dropDownType, strSearch) {
