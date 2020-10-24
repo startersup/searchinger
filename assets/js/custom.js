@@ -41,6 +41,7 @@ var dropDownList = {
 
   ]
 };
+
 $(document).on('click', '.formSubmit123', function () {
   var data = {};
   var apidata = {};
@@ -136,7 +137,7 @@ function loadDropDownDiv(dropDownType, strSearch) {
   var temp = '<ul class="loadDropdown_ul">';
   var j = 0;
   for (var i = 0; i < loop; i++) {
-    if ((dropDownVal[i].name.toLowerCase()).includes(str) && j < 5) {
+    if ((dropDownVal[i].name.toLowerCase()).includes(strSearch) && j < 5) {
       temp = temp + '<li class="loadDropdown_class_li" select-val="' + dropDownVal[i].id + '" >' + dropDownVal[i].name + '</li>'
       j = j + 1;
     }
