@@ -125,7 +125,7 @@ $(document).on('focus', '.loadDropdown', function () {
 
   var temp = '<div class="loadDropdown_div" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadDropdown_input" ><br>';
   var temp2 = loadDropDownDiv(dropDownType, 'a');
-  temp = temp + temp2 + '</div>';
+  temp = temp +'<ul class="loadDropdown_ul">'+ temp2 + '</ul></div>';
   $('.loadDropdown_div').remove();
   $(this).parent().append(temp);
 });
@@ -134,7 +134,7 @@ function loadDropDownDiv(dropDownType, strSearch) {
   strSearch = strSearch.toLowerCase();
   var dropDownVal = dropDownList[dropDownType];
   var loop = dropDownVal.length;
-  var temp = '<ul class="loadDropdown_ul">';
+  var temp = '';
   var j = 0;
   for (var i = 0; i < loop; i++) {
     if ((dropDownVal[i].name.toLowerCase()).includes(strSearch) && j < 5) {
@@ -142,7 +142,7 @@ function loadDropDownDiv(dropDownType, strSearch) {
       j = j + 1;
     }
   }
-  temp = temp + '</ul>';
+
   return temp;
 }
 
