@@ -133,15 +133,15 @@ function loadDropDownDiv(dropDownType, strSearch) {
   strSearch = strSearch.toLowerCase();
   var dropDownVal = dropDownList[dropDownType];
   var loop = dropDownVal.length;
-  var temp = '<div class="loadDropdown_div_2">';
+  var temp = '<ul class="loadDropdown_ul">';
   var j = 0;
   for (var i = 0; i < loop; i++) {
-    if ((driverList[i].name.toLowerCase()).includes(str) && j < 5) {
-      temp = temp + '<p class="loadDropdown_class_p" p-val="' + dropDownVal[i].id + '" >' + dropDownVal[i].name + '</p>'
+    if ((dropDownVal[i].name.toLowerCase()).includes(str) && j < 5) {
+      temp = temp + '<li class="loadDropdown_class_li" select-val="' + dropDownVal[i].id + '" >' + dropDownVal[i].name + '</li>'
       j = j + 1;
     }
   }
-  temp = temp + '</div>';
+  temp = temp + '</ul>';
   return temp;
 }
 
@@ -151,15 +151,15 @@ $(document).on('keyup', '.loadDropdown_input', function () {
   var strSearch = $(this).val().toLowerCase();
   var temp = loadDropDownDiv(dropDownType, strSearch);
 
-  $('.loadDropdown_div_2').html(temp);
+  $('.loadDropdown_div_ul').html(temp);
 
 });
 
-$(document).on('click', '.loadDropdown_class_p', function () {
+$(document).on('click', '.loadDropdown_class_li', function () {
 
   var dropDownType = $('.loadDropdown_input').attr("drop-type");
   var temp = '';
-  temp = temp + '<option value="' + $(this).attr("p-val") + '" >' + $(this).html() + '</option>';
+  temp = temp + '<option value="' + $(this).attr("select-val") + '" >' + $(this).html() + '</option>';
   $('.loadDropdown').each(function () {
 
     if ($(this).attr("drop-type") == dropDownType) {
