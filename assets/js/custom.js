@@ -152,7 +152,7 @@ $(document).on('keyup', '.loadDropdown_input', function () {
   var strSearch = $(this).val().toLowerCase();
   var temp = loadDropDownDiv(dropDownType, strSearch);
 
-  $('.loadDropdown_div_ul').html(temp);
+  $('.loadDropdown_div').html(temp);
 
 });
 
