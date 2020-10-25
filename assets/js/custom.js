@@ -123,7 +123,7 @@ $(document).on('focus', '.loadDropdown', function () {
 
   var dropDownType = $(this).attr("drop-type");
 
-  var temp = '<div class="loadDropdown_div" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadDropdown_input" ><br>';
+  var temp = '<div class="loadDropdown_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;position: absolute;width: 300px;z-index: 100;background-color: #ffffff;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadDropdown_input" ><br>';
   var temp2 = loadDropDownDiv(dropDownType, 'a');
   temp = temp +'<ul class="loadDropdown_ul">'+ temp2 + '</ul></div>';
   $('.loadDropdown_div').remove();
