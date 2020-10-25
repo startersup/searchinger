@@ -1,0 +1,626 @@
+/***navigation***/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+.pad-null {
+  padding: 0;
+  margin: 0;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.bg-black {
+  background-color: #000000;
+}
+
+.promote-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background-color: #422967;
+  border: none;
+  border-radius: 3px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.promote-btn a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.promote-btn:hover {
+  -webkit-box-shadow: 0 12px 22px 0 #dbc1fe;
+          box-shadow: 0 12px 22px 0 #dbc1fe;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  color: none !important;
+  background-color: transparent !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: none !important;
+}
+
+.has-error .form-control {
+  border-color: #a94442 !important;
+}
+
+.btn-primary {
+  background: #ff7e00 !important;
+  border-radius: 3px;
+  margin-top: 10px;
+  padding: 10px 20px 10px;
+  font-size: 13px;
+  color: #fff !important;
+  margin-top: 3px;
+  border: 1px solid #ccc;
+  outline: none !important;
+  display: inline-block;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.sng-navigation {
+  z-index: 1030;
+  -webkit-box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
+          box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
+  padding: .5rem 1rem;
+  background-color: #ffffff;
+  height: 60px;
+}
+
+.sng-navigation .sng-logo {
+  max-width: 30px;
+  width: 100%;
+  margin-top: -5px;
+}
+
+.sng-navigation .navbar-brand {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #422967;
+}
+
+.sng-navigation .navbar-brand span {
+  color: #ff7e00;
+}
+
+.sng-navigation .navbar-brand:hover {
+  color: #422967;
+}
+
+.sng-navigation ul li a {
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #333333;
+}
+
+.sng-navigation .sng-dropdown:hover .sng-dropdown-content {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.sng-navigation .sng-dropdown-content {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  background-color: #ffffff !important;
+  border-bottom: .0625rem solid #dbd9d2;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  content: "";
+  min-width: 600px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 50px;
+  padding: 30px;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  -webkit-transition: all .1s linear .05s;
+  transition: all .1s linear .05s;
+  width: 100%;
+  z-index: 0;
+}
+
+.sng-navigation .sng-free-business {
+  border-radius: 3px;
+  margin-right: 5px;
+  padding: 8px 10px 8px;
+  font-size: 14px;
+  color: #422967;
+  margin-top: 5px;
+  font-weight: 500;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.sng-navigation .sng-free-business:hover {
+  color: #422967;
+  font-weight: 500;
+}
+
+.sng-navigation .sng-post-ad {
+  background: #ff7e00;
+  border-radius: 3px;
+  margin-top: 10px;
+  padding: 10px 20px 10px;
+  font-size: 13px;
+  color: #fff !important;
+  margin-top: 3px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.sng-navigation .sng-post-ad:hover {
+  color: #ffffff !important;
+  background-color: #ff7e00 !important;
+}
+
+.sng-banner-section {
+  height: 500px;
+  width: 100%;
+  margin-top: 60px;
+  background: url(../images/main-banner.jpg), no-repeat;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
+          box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
+}
+
+.sng-banner-section .sng-banner-wrapper {
+  padding: 100px 0px;
+}
+
+.sng-banner-section .sng-banner-wrapper h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 80px;
+  max-width: 750px;
+  margin: 0 auto 40px;
+  font-size: 56px;
+  text-shadow: 0 0 5px #535151;
+}
+
+.sng-banner-section .sng-banner-wrapper .sng-highligher {
+  background-color: #fff;
+  border: 1px solid #adacaf;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(24, 104, 251, 0.2);
+  box-shadow: 0px 0px 0px 4px #ebe8ec33;
+}
+
+.sng-banner-section .sng-banner-wrapper .sng-search-wrapper {
+  position: relative;
+}
+
+.sng-banner-section .sng-banner-wrapper .sng-search-wrapper .sng-controls {
+  width: 100%;
+  padding: 10px 10px 10px 50px;
+  min-height: 40px;
+  border: none;
+  margin: 8px 0px;
+  color: #000000 !important;
+  font-size: 15px;
+  font-family: "Poppins", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  border-right: 1px solid #cccccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.sng-banner-section .sng-banner-wrapper .sng-search-wrapper .sng-textarea-controls {
+  width: 100%;
+  padding: 10px 10px 10px 50px;
+  border: none;
+  margin: 8px 0px;
+  color: #000000 !important;
+  font-size: 15px;
+  font-family: "Poppins", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  border-right: 1px solid #cccccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.sng-banner-section .sng-banner-wrapper .sng-search-wrapper .sng-float-icon {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  color: #c3c1c1;
+  font-size: 25px;
+}
+
+.sng-banner-section .sng-banner-wrapper .sng-find-business {
+  padding: 15px 20px;
+  margin-top: 3px;
+  width: 100%;
+  max-width: 192px;
+  background-color: #422967;
+  outline: none;
+  border: none;
+  color: #ffffff !important;
+  font-family: "Poppins", "-apple-system", "system-ui", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.sng-features {
+  margin-top: 40px;
+  padding: 60px 0px;
+}
+
+.sng-features .sng-feature-images {
+  max-width: 500px;
+  width: 100%;
+}
+
+.sng-features h3 {
+  color: #000000;
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.3px;
+}
+
+.sng-features p {
+  font-size: 16px;
+  line-height: 27px;
+  color: #444444;
+  letter-spacing: 0.5px;
+}
+
+.loadDropdown_div {
+  -webkit-box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
+          box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
+  border-radius: .25rem;
+  padding: 15px;
+  position: absolute;
+  width: 300px;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+.loadDropdown_div .loadDropdown_input {
+  border: 1px solid #cfcfcf;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.loadDropdown_div .loadDropdown_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.loadDropdown_div .loadDropdown_ul .loadDropdown_class_li {
+  padding: 10px 0px;
+}
+
+.sng-list-your-business {
+  margin-top: 100px;
+}
+
+.sng-list-your-business h3 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.sng-list-your-business .sng-listing-form {
+  background-color: #ffffff;
+  max-width: 750px;
+  width: 100%;
+  margin: 20px auto;
+  -webkit-box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
+          box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
+  border-radius: .25rem;
+  padding: 30px;
+}
+
+.sng-list-your-business .sng-listing-form label {
+  font-weight: 600;
+}
+
+.sng-list-your-business .sng-listing-form sup {
+  color: #ff0000;
+}
+
+.sng-list-your-business .sng-listing-form .sng-form-inputs {
+  font-size: 0.98rem;
+  padding: 10px 12px;
+  height: 40px;
+  border-color: #dee4ea;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 13px;
+}
+
+.sng-list-your-business .sng-listing-form .sng-form-textarea {
+  font-size: 0.98rem;
+  padding: 10px 12px;
+  border-color: #dee4ea;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 13px;
+}
+
+.sng-list-your-business .sng-listing-form .sng-logo-input {
+  margin: 10px;
+  height: 45px;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 5px 2px #ddd;
+          box-shadow: 0 0 5px 2px #ddd;
+}
+
+.sng-list-your-business .sng-listing-form .sng-social-links {
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.sng-list-your-business .sng-listing-form .file-upload-rule {
+  padding: 0px 10px;
+}
+
+.sng-list-your-business .sng-listing-form .sng-logo-wrapper {
+  width: 180px;
+  height: 180px;
+  margin-right: 40px;
+  margin-top: 10px;
+  overflow: hidden;
+  display: inline-block;
+  padding: 0;
+  background-color: #dfdfdf;
+  border: 5px solid #fff;
+  -webkit-box-shadow: 0 0 5px 2px #ddd;
+          box-shadow: 0 0 5px 2px #ddd;
+}
+
+.sng-list-your-business .sng-listing-form .sng-submit-btn {
+  background: #422967;
+  border-radius: 3px;
+  margin-top: 10px;
+  border: none;
+  padding: 10px 20px 10px;
+  font-size: 13px;
+  color: #fff !important;
+  margin-top: 3px;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.sng-list-your-business .sng-listing-form .sng-next-btn {
+  background: #422967;
+  border-radius: 3px;
+  margin-top: 10px;
+  border: none;
+  padding: 10px 20px 10px;
+  font-size: 13px;
+  color: #fff !important;
+  margin-top: 3px;
+  outline: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.sng-list-your-business .sng-listing-form .sng-working-hrs {
+  background-color: #f6f7f8;
+  width: 100%;
+}
+
+.sng-list-your-business .sng-listing-form .sng-working-hrs th {
+  border: 1px solid #dee4ea;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sng-list-your-business .sng-listing-form .sng-working-hrs td {
+  background-color: #ffffff;
+  border: 1px solid #dee4ea;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sng-list-your-business .sng-listing-form .sng-working-hrs td select {
+  border: 1px solid #dee4ea;
+  outline: none;
+}
+
+.sng-category {
+  padding: 50px 0px;
+}
+
+.sng-category .sng-category-wrapper ul {
+  display: inline;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sng-category .sng-category-wrapper li {
+  display: inline-block;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+
+.sng-category .sng-category-wrapper li .sn-category-card {
+  width: 145px;
+  text-align: center;
+  font-size: 15px;
+  padding: 10px 30px;
+  border-radius: 8px;
+  border: 1px solid #efefef;
+  -webkit-box-shadow: 0 2px 4px rgba(64, 30, 76, 0.1);
+          box-shadow: 0 2px 4px rgba(64, 30, 76, 0.1);
+}
+
+.sng-category .sng-category-wrapper li .sn-category-card img {
+  max-width: 50px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sng-category .sng-category-wrapper li .sn-category-card p {
+  margin-top: 10px;
+}
+
+.sng-results {
+  margin-top: 70px;
+}
+
+.sng-results h3 {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+}
+
+.sng-results h3 span {
+  font-size: 20px;
+  color: #ff3c00d9;
+  font-weight: 500;
+}
+
+.sng-results .sng-result-card {
+  text-align: left;
+  padding: 10px;
+  width: 100%;
+  margin-top: 15px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+.sng-results .sng-result-card .sng-logo {
+  max-width: 100px;
+}
+
+.sng-results .sng-result-card h4 {
+  font-size: 20px;
+  line-height: 15px;
+}
+
+.sng-results .sng-result-card p {
+  color: #99a4bd;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+
+.sng-results .sng-result-card:hover {
+  -webkit-box-shadow: 0 35px 32px 0 rgba(0, 0, 0, 0.09);
+          box-shadow: 0 35px 32px 0 rgba(0, 0, 0, 0.09);
+  -webkit-transform: translatey(-4px);
+          transform: translatey(-4px);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.sng-results .sng-result-card .sng-action-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sng-results .sng-result-card .sng-action-bar button.sng-action-btn {
+  border: 1.5px solid #cfc9d8;
+  color: #565656;
+  background-color: transparent;
+  border-radius: 3px;
+  padding: 5px 20px;
+  margin: 2px 5px;
+  font-size: 13px;
+}
+
+.sng-results .sng-result-card .sng-action-bar button.sng-action-btn:hover {
+  border: 1.5px solid #ff7e00;
+  background: #ff7e00;
+  color: #ffffff;
+}
+
+.sng-results .sng-result-card .sng-star-rating-bar {
+  width: 150px;
+}
+
+.sng-results .sng-result-card .sng-star-rating-bar .checked {
+  color: orange;
+}
+
+.sng-results .sng-result-card .sng-star-rating-bar p {
+  font-size: 12px;
+}
+
+.sng-results .sng-result-card .sng-social-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.sng-results .sng-result-card .sng-social-bar a {
+  text-decoration: none;
+}
+
+.sng-results .sng-result-card .sng-social-bar .fa {
+  color: #000000;
+  padding: 5px 10px;
+  margin: 0px 0px 5px 0px;
+  font-size: 16px;
+}
+
+.sng-results .sng-result-card .sng-social-bar .fa:hover {
+  background-color: #ff7e00;
+  color: #ffffff;
+}
+
+.sng-footer {
+  background-color: #bfcbe6;
+  padding: 20px;
+}
+
+@media only screen and (max-width: 780px) and (min-width: 500px) {
+  .sng-controls {
+    font-size: 13px !important;
+  }
+  .sng-find-business {
+    padding: 14px 20px !important;
+    margin-top: 5px !important;
+    width: 100%;
+    max-width: 244px !important;
+    background-color: #422967;
+    outline: none;
+    border: none;
+    color: #ffffff !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .sng-banner-section {
+    height: 300px !important;
+  }
+  .sng-banner-section .sng-banner-wrapper h1 {
+    line-height: 46px !important;
+    font-size: 28px !important;
+  }
+  .sng-banner-section .sng-banner-wrapper .sng-controls {
+    border-bottom: 1px solid #cccccc !important;
+    padding: 20px 10px 20px 50px !important;
+    margin: 0 !important;
+  }
+  .sng-banner-section .sng-banner-wrapper .sng-find-business {
+    margin: 0;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
