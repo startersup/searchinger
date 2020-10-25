@@ -581,6 +581,8 @@ body {
 
 .loadDropdown_div .loadDropdown_ul .loadDropdown_class_li {
   padding: 10px 0px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .sng-footer {
