@@ -123,7 +123,7 @@ $(document).on('focus', '.loadDropdown', function () {
 
   var dropDownType = $(this).attr("drop-type");
 
-  var temp = '<div class="loadDropdown_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;position: absolute;width: 350px;z-index: 100;background-color: #ffffff;height:350px;overflow-y:scroll;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadDropdown_input" style="border: 1px solid rgba(252,68,18,.3) !important;width:100%;margin-bottom:10px;" ><br>';
+  var temp = '<div class="loadDropdown_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;position: absolute;width: 350px;z-index: 100;background-color: #ffffff;height:300px;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadDropdown_input" style="border: 1px solid rgba(252,68,18,.3) !important;width:100%;margin-bottom:10px;" ><br>';
   var temp2 = loadDropDownDiv(dropDownType, 'a');
   temp = temp +'<ul class="loadDropdown_ul" style="list-style-type: none;margin:0;padding:0;">'+ temp2 + '</ul></div>';
   $('.loadDropdown_div').remove();
@@ -138,7 +138,7 @@ function loadDropDownDiv(dropDownType, strSearch) {
   var j = 0;
   for (var i = 0; i < loop; i++) {
     if ((dropDownVal[i].name.toLowerCase()).includes(strSearch) && j < 20) {
-      temp = temp + '<li class="loadDropdown_class_li" style="padding:10px 0px;cursor: pointer;font-size:14px;" select-val="' + dropDownVal[i].id + '" >' + dropDownVal[i].name + '</li>'
+      temp = temp + '<li class="loadDropdown_class_li" style="padding:10px 0px;cursor: pointer;font-size:14px;height:250px;overflow-y:scroll;" select-val="' + dropDownVal[i].id + '" >' + dropDownVal[i].name + '</li>'
       j = j + 1;
     }
   }
