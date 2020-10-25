@@ -280,33 +280,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-.loadDropdown_div {
-  -webkit-box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
-          box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
-  border-radius: .25rem;
-  padding: 15px;
-  position: absolute;
-  width: 300px;
-  z-index: 100;
-  background-color: #ffffff;
-}
-
-.loadDropdown_div .loadDropdown_input {
-  border: 1px solid #cfcfcf;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.loadDropdown_div .loadDropdown_ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.loadDropdown_div .loadDropdown_ul .loadDropdown_class_li {
-  padding: 10px 0px;
-}
-
 .sng-list-your-business {
   margin-top: 100px;
 }
@@ -581,6 +554,33 @@ body {
 .sng-results .sng-result-card .sng-social-bar .fa:hover {
   background-color: #ff7e00;
   color: #ffffff;
+}
+
+.loadDropdown_div {
+  -webkit-box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
+          box-shadow: 0 1px 5px 3px rgba(46, 50, 52, 0.1);
+  border-radius: .25rem;
+  padding: 15px;
+  position: absolute;
+  width: 300px;
+  z-index: 100;
+  background-color: #ffffff;
+}
+
+.loadDropdown_div .loadDropdown_input {
+  border: 1px solid #cfcfcf;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.loadDropdown_div .loadDropdown_ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.loadDropdown_div .loadDropdown_ul .loadDropdown_class_li {
+  padding: 10px 0px;
 }
 
 .sng-footer {
