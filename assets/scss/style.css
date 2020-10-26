@@ -176,8 +176,9 @@ body {
   margin-top: 60px;
   background: url(../images/main-banner.jpg), no-repeat;
   background-size: cover;
-  -webkit-box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
-          box-shadow: inset 0 0 0 2000px rgba(255, 0, 150, 0.3);
+  background-color: #422967;
+  -webkit-box-shadow: inset 0 0 0 2000px #0605064d;
+          box-shadow: inset 0 0 0 2000px #0605064d;
 }
 
 .sng-banner-section .sng-banner-wrapper {
