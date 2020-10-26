@@ -290,6 +290,7 @@ position: relative;
     height: 45px;
     padding: 10px;
     box-shadow: 0 0 5px 2px #ddd;
+    outline:none;
         }
         .sng-social-links
         {
@@ -551,7 +552,7 @@ a
     padding:0;
     .loadDropdown_class_li
     {
-        padding:10px 0px;
+        padding:10px;
         cursor: pointer;
         font-size:14px;
     }
