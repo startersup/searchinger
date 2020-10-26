@@ -335,6 +335,7 @@ body {
   padding: 10px;
   -webkit-box-shadow: 0 0 5px 2px #ddd;
           box-shadow: 0 0 5px 2px #ddd;
+  outline: none;
 }
 
 .sng-list-your-business .sng-listing-form .sng-social-links {
@@ -580,9 +581,13 @@ body {
 }
 
 .loadDropdown_div .loadDropdown_ul .loadDropdown_class_li {
-  padding: 10px 0px;
+  padding: 10px 15px;
   cursor: pointer;
   font-size: 14px;
+}
+
+.loadDropdown_div .loadDropdown_ul .loadDropdown_class_li:hover {
+  background-color: #39e7e7;
 }
 
 .sng-footer {

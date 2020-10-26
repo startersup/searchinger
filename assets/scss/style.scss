@@ -552,9 +552,13 @@ a
     padding:0;
     .loadDropdown_class_li
     {
-        padding:10px;
+        padding:10px 15px;
         cursor: pointer;
         font-size:14px;
+        
+       &:hover {
+            background-color: rgb(57, 231, 231);
+          }
     }
     }
 }
