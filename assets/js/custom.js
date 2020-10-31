@@ -65,12 +65,12 @@ function loadTimingTable()
   {
     tempData += '<tr><td>'+weekDaysList[i]+'</td>';
     var dropDown = selectFromHrs.replace('selectFromHrs',weekDaysList[i]+'_hrs_from');
-    tempData += '<tr><td>'+dropDown;
+    tempData += '<td>'+dropDown;
     dropDown = selectFromMins.replace('selectFromMins',weekDaysList[i]+'_mins_from');
-    tempData += dropDown+'</td></tr>';
+    tempData += dropDown+'</td>';
 
     dropDown = selectToHrs.replace('selectToHrs',weekDaysList[i]+'_hrs_to');
-    tempData += '<tr><td>'+dropDown;
+    tempData += '<td>'+dropDown;
     dropDown = selectToMins.replace('selectToMins',weekDaysList[i]+'_mins_to');
     tempData += dropDown+'</td></tr>';
   }
@@ -80,7 +80,7 @@ function loadTimingTable()
 
 function selectTimeHrs(className)
 {
-  var retTemp='<select class="'+className+'" >';
+  var retTemp='<select class=" selectTimeHrs '+className+'" >';
   for(var i=0;i<24;i++)
   {
     var digit =digitShow(i);
@@ -93,7 +93,7 @@ function selectTimeHrs(className)
 
 function selectTimeMins(className)
 {
-  var retTemp='<select class="'+className+'" >';
+  var retTemp='<select class=" selectTimeMins '+className+'" >';
   for(var i=0;i<60;i++)
   {
     var digit =digitShow(i);
