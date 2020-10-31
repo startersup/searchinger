@@ -87,6 +87,8 @@ function selectTimeHrs(className)
     retTemp +='<option value="'+digit+'">'+digit+'</option>';
   }
   retTemp +='</select>';
+
+  return retTemp;
 }
 
 function selectTimeMins(className)
@@ -98,6 +100,8 @@ function selectTimeMins(className)
     retTemp +='<option value="'+digit+'">'+digit+'</option>';
   }
   retTemp +='</select>';
+  
+  return retTemp;
 }
 
 $(document).on('click', '.formSubmit123', function () {
