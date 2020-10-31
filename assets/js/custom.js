@@ -42,6 +42,64 @@ var dropDownList = {
   ]
 };
 
+$( document ).ready(function() {
+  loadTimingTable();
+});
+
+var weekDaysList=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+
+function digitShow(n){
+  return n > 9 ? "" + n: "0" + n;
+}
+
+function loadTimingTable()
+{
+  var tableId="timingTable";
+  var tempData='';
+  var loop = weekDaysList.length;
+  var selectFromHrs=selectTimeHrs('selectFromHrs');
+  var selectToHrs=selectTimeHrs('selectToHrs');
+  var selectFromMins=selectTimeMins('selectFromMins')
+  var selectToMins=selectTimeMins('selectToMins')
+  for(var i=0;i<loop;i++)
+  {
+    tempData += '<tr><td>'+weekDaysList[i]+'</td>';
+    var dropDown = selectFromHrs.replace('selectFromHrs',weekDaysList[i]+'_hrs_from');
+    tempData += '<tr><td>'+dropDown;
+    dropDown = selectFromMins.replace('selectFromMins',weekDaysList[i]+'_mins_from');
+    tempData += dropDown+'</td></tr>';
+
+    dropDown = selectToHrs.replace('selectToHrs',weekDaysList[i]+'_hrs_to');
+    tempData += '<tr><td>'+dropDown;
+    dropDown = selectToMins.replace('selectToMins',weekDaysList[i]+'_mins_to');
+    tempData += dropDown+'</td></tr>';
+  }
+
+  $('#timingTable').html(tempData);
+}
+
+function selectTimeHrs(className)
+{
+  var retTemp='<select class="'+className+'" >';
+  for(var i=0;i<24;i++)
+  {
+    var digit =digitShow(i);
+    retTemp +='<option value="'+digit+'">'+digit+'</option>';
+  }
+  retTemp +='</select>';
+}
+
+function selectTimeMins(className)
+{
+  var retTemp='<select class="'+className+'" >';
+  for(var i=0;i<60;i++)
+  {
+    var digit =digitShow(i);
+    retTemp +='<option value="'+digit+'">'+digit+'</option>';
+  }
+  retTemp +='</select>';
+}
+
 $(document).on('click', '.formSubmit123', function () {
   var data = {};
   var apidata = {};
