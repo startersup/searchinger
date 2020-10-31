@@ -52,7 +52,29 @@ function digitShow(n){
   return n > 9 ? "" + n: "0" + n;
 }
 
+
 function loadTimingTable()
+{
+  var tableId="timingTable";
+  var tempData='';
+  var loop = weekDaysList.length;
+  var selectFromHrs=selectTimeHrs('selectFromHrs');
+  var selectToHrs=selectTimeHrs('selectToHrs');
+  var selectFromMins=selectTimeMins('selectFromMins')
+  var selectToMins=selectTimeMins('selectToMins')
+  for(var i=0;i<loop;i++)
+  {
+    tempData += '<tr><td>'+weekDaysList[i]+'</td>';
+    tempData += '<td><input type="time" min=""  class="'+weekDaysList[i]+'_from"></td>';
+
+    dropDown = selectToHrs.replace('selectToHrs',weekDaysList[i]+'_hrs_to');
+    tempData += '<td><input type="time" min="" class="'+weekDaysList[i]+'_to"></td></tr>';
+  }
+
+  $('#timingTable').html(tempData);
+}
+
+function loadTimingTableDropDown()
 {
   var tableId="timingTable";
   var tempData='';
