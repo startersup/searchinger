@@ -139,7 +139,7 @@ $(document).on('click', '.formSubmit123', function () {
 
 });
 
-$(document).on('click', '#workTimingCheck', function () {
+$(document).on('click', '.workTimingCheck', function () {
   setTableTime($(this).val());
 });
 
