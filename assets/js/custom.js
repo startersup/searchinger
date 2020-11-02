@@ -148,14 +148,14 @@ function setTableTime(val) {
     var loop = weekDaysList.length;
     for (var i = 0; i < loop; i++) {
       var id =weekDaysList[i] + '_hrs_from';
-      $('#'+id).val('00');
+      $('.'+id).val('00');
       id =weekDaysList[i] + '_mins_from';
-      $('#'+id).val('00');
+      $('.'+id).val('00');
 
       id =weekDaysList[i] + '_hrs_to';
-      $('#'+id).val('23');
+      $('.'+id).val('23');
       id =weekDaysList[i] + '_mins_to';
-      $('#'+id).val('59');
+      $('.'+id).val('59');
     }
   }
 }
@@ -167,13 +167,13 @@ function getTableTime(val) {
       var id =weekDaysList[i] + '_hrs_from';     
      var id2 =weekDaysList[i] + '_mins_from';
      var inputid =weekDaysList[i] + 'Start';
-     var temp = $('#'+id).val()+':'+$('#'+id2).val();
+     var temp = $('.'+id).val()+':'+$('.'+id2).val();
      $('#'+inputid).val(temp);
 
        id =weekDaysList[i] + '_hrs_to';     
       id2 =weekDaysList[i] + '_mins_to';
       inputid =weekDaysList[i] + 'End';
-      temp = $('#'+id).val()+':'+$('#'+id2).val();
+      temp = $('.'+id).val()+':'+$('.'+id2).val();
      $('#'+inputid).val(temp);
     }
   }
