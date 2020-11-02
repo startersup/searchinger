@@ -42,87 +42,79 @@ var dropDownList = {
   ]
 };
 
-$( document ).ready(function() {
-  loadTimingTable();
+$(document).ready(function () {
+  loadTimingTableDropDown();
 });
 
-var weekDaysList=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"]
+var weekDaysList = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-function digitShow(n){
-  return n > 9 ? "" + n: "0" + n;
+function digitShow(n) {
+  return n > 9 ? "" + n : "0" + n;
 }
 
 
-function loadTimingTable()
-{
-  var tableId="timingTable";
-  var tempData='';
+function loadTimingTable() {
+  var tableId = "timingTable";
+  var tempData = '';
   var loop = weekDaysList.length;
-  var selectFromHrs=selectTimeHrs('selectFromHrs');
-  var selectToHrs=selectTimeHrs('selectToHrs');
-  var selectFromMins=selectTimeMins('selectFromMins')
-  var selectToMins=selectTimeMins('selectToMins')
-  for(var i=0;i<loop;i++)
-  {
-    tempData += '<tr><td>'+weekDaysList[i]+'</td>';
-    tempData += '<td><input type="time" min=""  class="'+weekDaysList[i]+'_from"></td>';
+  var selectFromHrs = selectTimeHrs('selectFromHrs');
+  var selectToHrs = selectTimeHrs('selectToHrs');
+  var selectFromMins = selectTimeMins('selectFromMins')
+  var selectToMins = selectTimeMins('selectToMins')
+  for (var i = 0; i < loop; i++) {
+    tempData += '<tr><td>' + weekDaysList[i] + '</td>';
+    tempData += '<td><input type="time" min=""  class="' + weekDaysList[i] + '_from"></td>';
 
-    dropDown = selectToHrs.replace('selectToHrs',weekDaysList[i]+'_hrs_to');
-    tempData += '<td><input type="time" min="" class="'+weekDaysList[i]+'_to"></td></tr>';
+    dropDown = selectToHrs.replace('selectToHrs', weekDaysList[i] + '_hrs_to');
+    tempData += '<td><input type="time" min="" class="' + weekDaysList[i] + '_to"></td></tr>';
   }
 
   $('#timingTable').html(tempData);
 }
 
-function loadTimingTableDropDown()
-{
-  var tableId="timingTable";
-  var tempData='';
+function loadTimingTableDropDown() {
+  var tableId = "timingTable";
+  var tempData = '';
   var loop = weekDaysList.length;
-  var selectFromHrs=selectTimeHrs('selectFromHrs');
-  var selectToHrs=selectTimeHrs('selectToHrs');
-  var selectFromMins=selectTimeMins('selectFromMins')
-  var selectToMins=selectTimeMins('selectToMins')
-  for(var i=0;i<loop;i++)
-  {
-    tempData += '<tr><td>'+weekDaysList[i]+'</td>';
-    var dropDown = selectFromHrs.replace('selectFromHrs',weekDaysList[i]+'_hrs_from');
-    tempData += '<td>'+dropDown;
-    dropDown = selectFromMins.replace('selectFromMins',weekDaysList[i]+'_mins_from');
-    tempData += dropDown+'</td>';
+  var selectFromHrs = selectTimeHrs('selectFromHrs');
+  var selectToHrs = selectTimeHrs('selectToHrs');
+  var selectFromMins = selectTimeMins('selectFromMins')
+  var selectToMins = selectTimeMins('selectToMins')
+  for (var i = 0; i < loop; i++) {
+    tempData += '<tr><td>' + weekDaysList[i] + '</td>';
+    var dropDown = selectFromHrs.replace('selectFromHrs', weekDaysList[i] + '_hrs_from');
+    tempData += '<td>' + dropDown;
+    dropDown = selectFromMins.replace('selectFromMins', weekDaysList[i] + '_mins_from');
+    tempData += dropDown + '</td>';
 
-    dropDown = selectToHrs.replace('selectToHrs',weekDaysList[i]+'_hrs_to');
-    tempData += '<td>'+dropDown;
-    dropDown = selectToMins.replace('selectToMins',weekDaysList[i]+'_mins_to');
-    tempData += dropDown+'</td></tr>';
+    dropDown = selectToHrs.replace('selectToHrs', weekDaysList[i] + '_hrs_to');
+    tempData += '<td>' + dropDown;
+    dropDown = selectToMins.replace('selectToMins', weekDaysList[i] + '_mins_to');
+    tempData += dropDown + '</td></tr>';
   }
 
   $('#timingTable').html(tempData);
 }
 
-function selectTimeHrs(className)
-{
-  var retTemp='<select class=" selectTimeHrs '+className+'" >';
-  for(var i=0;i<24;i++)
-  {
-    var digit =digitShow(i);
-    retTemp +='<option value="'+digit+'">'+digit+'</option>';
+function selectTimeHrs(className) {
+  var retTemp = '<select class=" selectTimeHrs ' + className + '" >';
+  for (var i = 0; i < 24; i++) {
+    var digit = digitShow(i);
+    retTemp += '<option value="' + digit + '">' + digit + '</option>';
   }
-  retTemp +='</select>';
+  retTemp += '</select>';
 
   return retTemp;
 }
 
-function selectTimeMins(className)
-{
-  var retTemp='<select class=" selectTimeMins '+className+'" >';
-  for(var i=0;i<60;i++)
-  {
-    var digit =digitShow(i);
-    retTemp +='<option value="'+digit+'">'+digit+'</option>';
+function selectTimeMins(className) {
+  var retTemp = '<select class=" selectTimeMins ' + className + '" >';
+  for (var i = 0; i < 60; i++) {
+    var digit = digitShow(i);
+    retTemp += '<option value="' + digit + '">' + digit + '</option>';
   }
-  retTemp +='</select>';
-  
+  retTemp += '</select>';
+
   return retTemp;
 }
 
@@ -146,6 +138,46 @@ $(document).on('click', '.formSubmit123', function () {
   }
 
 });
+
+$(document).on('click', '#workTimingCheck', function () {
+  setTableTime($(this).val());
+});
+
+function setTableTime(val) {
+  if (val == 247 || val == '247') {
+    var loop = weekDaysList.length;
+    for (var i = 0; i < loop; i++) {
+      var id =weekDaysList[i] + '_hrs_from';
+      $('#'+id).val('00');
+      id =weekDaysList[i] + '_mins_from';
+      $('#'+id).val('00');
+
+      id =weekDaysList[i] + '_hrs_to';
+      $('#'+id).val('23');
+      id =weekDaysList[i] + '_mins_to';
+      $('#'+id).val('59');
+    }
+  }
+}
+
+function getTableTime(val) {
+  if (val == 247 || val == '247') {
+    var loop = weekDaysList.length;
+    for (var i = 0; i < loop; i++) {
+      var id =weekDaysList[i] + '_hrs_from';     
+     var id2 =weekDaysList[i] + '_mins_from';
+     var inputid =weekDaysList[i] + 'Start';
+     var temp = $('#'+id).val()+':'+$('#'+id2).val();
+     $('#'+inputid).val(temp);
+
+       id =weekDaysList[i] + '_hrs_to';     
+      id2 =weekDaysList[i] + '_mins_to';
+      inputid =weekDaysList[i] + 'End';
+      temp = $('#'+id).val()+':'+$('#'+id2).val();
+     $('#'+inputid).val(temp);
+    }
+  }
+}
 $(document).on('keyup', '.number', function () {
 
   var ele = $(this).val();
@@ -183,6 +215,7 @@ function get_url_response(callType, url, data, func) {
 
 // $("form#").submit(function(){
 $(document).on("submit", "#businessList", function () {
+  getTableTime(val);
   var formData = new FormData($(this)[0]);
   var Url = myUrl + 'apis/v1/business/';
   $.ajax({
@@ -213,7 +246,7 @@ $(document).on('focus', '.loadDropdown', function () {
   temp = temp + '<ul class="loadDropdown_ul" style="list-style-type: none;margin:0;padding:0;height:250px;overflow-y:scroll;">' + temp2 + '</ul></div>';
   $('.loadDropdown_div').remove();
   $(this).parent().append(temp);
-  
+
 });
 
 function loadDropDownDiv(dropDownType, strSearch) {

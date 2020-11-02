@@ -29,21 +29,37 @@ $path=$link."://". $_SERVER['HTTP_HOST']."/";
 
 include($rootfolder.'/connection/connection.php');
 
-$image = $_POST["image"];
-$bussiName = $_POST["bussiName"];
-$businessMail = $_POST["businessMail"];
-$contactNumber = $_POST["contactNumber"];
-$businessCategory = $_POST["businessCategory"];
-$businessDescription = $_POST["businessDescription"];
-$businessWebsite = $_POST["businessWebsite"];
-$businessAddress = $_POST["businessAddress"];
-$googleReviews = $_POST["googleReviews"];
-$facebookLink = $_POST["facebookLink"];
-$twitterLink = $_POST["twitterLink"];
-$googleBusinessLink = $_POST["googleBusinessLink"];
+// $image = $_POST["image"];
+// $bussiName = $_POST["bussiName"];
+// $businessMail = $_POST["businessMail"];
+// $contactNumber = $_POST["contactNumber"];
+// $businessCategory = $_POST["businessCategory"];
+// $businessDescription = $_POST["businessDescription"];
+// $businessWebsite = $_POST["businessWebsite"];
+// $businessAddress = $_POST["businessAddress"];
+// $googleReviews = $_POST["googleReviews"];
+// $facebookLink = $_POST["facebookLink"];
+// $twitterLink = $_POST["twitterLink"];
+// $googleBusinessLink = $_POST["googleBusinessLink"];
 
-$sql = "INSERT INTO `bussinessList` ( `businessName`, `businessMail`, `contactNumber`, `businessCategory`, `businessDescription`, `businessWebsite`, `businessAddress`, `facebookLink`, `twitterLink`, `googleBusinessLink`,  `googleReviews`, `overAllReviews`,  `businessAbout`)  VALUES ( '$bussiName', '$businessMail', '$contactNumber', '$businessCategory', '$businessDescription', '$businessWebsite', '$businessAddress', '$facebookLink', '$twitterLink', '$googleBusinessLink', '$googleReviews', '$googleReviews', '')";
+// $sql = "INSERT INTO `bussinessList`
+//  ( `businessName`, `businessMail`, `contactNumber`, `businessCategory`, `businessDescription`, `businessWebsite`, `businessAddress`, `facebookLink`, `twitterLink`, `googleBusinessLink`,  `googleReviews`, `overAllReviews`,  `businessAbout`) 
+//   VALUES ( '$bussiName', '$businessMail', '$contactNumber', '$businessCategory', '$businessDescription', '$businessWebsite', '$businessAddress', '$facebookLink', '$twitterLink', '$googleBusinessLink', '$googleReviews', '$googleReviews', '')";
 
+$sql = "INSERT INTO `bussinessList` ";
+$sqlCols = "( `toberepcust` ";
+$sqlVals = "( `toberepcust` ";
+foreach ($_POST["data"] as $param_name => $param_val) {
+    // echo "Param: $param_name; Value: $param_val<br />\n";
+    if (!(strpos($checkParams, $param_name))) {
+        $sqlCols .= ", `" . $param_name . "` ";
+        $sqlVals .= ", '" . $param_val . "' ";
+    }
+}
+$sqlCols = str_replace("`toberepcust` ,", "", $sqlCols);
+$sqlVals = str_replace("`toberepcust` ,", "", $sqlVals);
+$sql .= $sqlCols . ") VALUES " . $sqlVals . ")";
+$response["sql"]=$sql;
 $response["sql"] = $sql;
 if($conn)
 {
