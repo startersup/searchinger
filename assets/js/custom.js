@@ -140,22 +140,59 @@ $(document).on('click', '.formSubmit123', function () {
 });
 
 $(document).on('click', '.workTimingCheck', function () {
-  setTableTime($(this).val());
+  if ($(this).is(":checked")) {
+    setTableTime($(this).val());
+  } else {
+    $('#workingFullHours').val('0');
+  }
+
 });
 
+function clearTableTime() {
+
+  $('#workingFullHours').val('0');
+  var loop = weekDaysList.length;
+  for (var i = 0; i < loop; i++) {
+    var id = weekDaysList[i] + '_hrs_from';
+    $('.' + id).val('00');
+    id = weekDaysList[i] + '_mins_from';
+    $('.' + id).val('00');
+
+    id = weekDaysList[i] + '_hrs_to';
+    $('.' + id).val('00');
+    id = weekDaysList[i] + '_mins_to';
+    $('.' + id).val('00');
+  }
+
+}
 function setTableTime(val) {
   if (val == 247 || val == '247') {
+    $('#workingFullHours').val('1');
     var loop = weekDaysList.length;
     for (var i = 0; i < loop; i++) {
-      var id =weekDaysList[i] + '_hrs_from';
-      $('.'+id).val('00');
-      id =weekDaysList[i] + '_mins_from';
-      $('.'+id).val('00');
+      var id = weekDaysList[i] + '_hrs_from';
+      $('.' + id).val('00');
+      id = weekDaysList[i] + '_mins_from';
+      $('.' + id).val('00');
 
-      id =weekDaysList[i] + '_hrs_to';
-      $('.'+id).val('23');
-      id =weekDaysList[i] + '_mins_to';
-      $('.'+id).val('59');
+      id = weekDaysList[i] + '_hrs_to';
+      $('.' + id).val('23');
+      id = weekDaysList[i] + '_mins_to';
+      $('.' + id).val('59');
+    }
+  } else if (val == 5 || val == '5') {
+    $('#workingFullHours').val('0');
+    var loop = (weekDaysList.length - 1);
+    for (var i = 0; i < loop; i++) {
+      var id = weekDaysList[i] + '_hrs_from';
+      $('.' + id).val('09');
+      id = weekDaysList[i] + '_mins_from';
+      $('.' + id).val('00');
+
+      id = weekDaysList[i] + '_hrs_to';
+      $('.' + id).val('18');
+      id = weekDaysList[i] + '_mins_to';
+      $('.' + id).val('00');
     }
   }
 }
@@ -164,17 +201,17 @@ function getTableTime(val) {
   if (val == 247 || val == '247') {
     var loop = weekDaysList.length;
     for (var i = 0; i < loop; i++) {
-      var id =weekDaysList[i] + '_hrs_from';     
-     var id2 =weekDaysList[i] + '_mins_from';
-     var inputid =weekDaysList[i] + 'Start';
-     var temp = $('.'+id).val()+':'+$('.'+id2).val();
-     $('#'+inputid).val(temp);
+      var id = weekDaysList[i] + '_hrs_from';
+      var id2 = weekDaysList[i] + '_mins_from';
+      var inputid = weekDaysList[i] + 'Start';
+      var temp = $('.' + id).val() + ':' + $('.' + id2).val();
+      $('#' + inputid).val(temp);
 
-       id =weekDaysList[i] + '_hrs_to';     
-      id2 =weekDaysList[i] + '_mins_to';
-      inputid =weekDaysList[i] + 'End';
-      temp = $('.'+id).val()+':'+$('.'+id2).val();
-     $('#'+inputid).val(temp);
+      id = weekDaysList[i] + '_hrs_to';
+      id2 = weekDaysList[i] + '_mins_to';
+      inputid = weekDaysList[i] + 'End';
+      temp = $('.' + id).val() + ':' + $('.' + id2).val();
+      $('#' + inputid).val(temp);
     }
   }
 }

@@ -49,7 +49,7 @@ include($rootfolder.'/connection/connection.php');
 $sql = "INSERT INTO `bussinessList` ";
 $sqlCols = "( `toberepcust` ";
 $sqlVals = "( `toberepcust` ";
-foreach ($_POST["data"] as $param_name => $param_val) {
+foreach ($_POST as $param_name => $param_val) {
     // echo "Param: $param_name; Value: $param_val<br />\n";
     if (!(strpos($checkParams, $param_name))) {
         $sqlCols .= ", `" . $param_name . "` ";
