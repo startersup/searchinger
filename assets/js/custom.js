@@ -2,6 +2,7 @@
 var myProtocol = window.location.protocol;
 var mySite = window.location.host;
 var myUrl = myProtocol + "//" + mySite + "/";
+var loadVal={};
 var dropDownList = {
   "businessCategory": [
     { "id": 1, "name": "All Categories" },
@@ -260,7 +261,8 @@ function get_url_response_input(callType, url, data) {
     async: false,
     success: function (data) {
       objData = JSON.parse(data);
-      return (objData.data);
+      loadVal= (objData.data);
+      console.log(loadVal);
     },
     error: function (xhr) { return objData; }
   });
@@ -309,14 +311,14 @@ $(document).on('keyup', '.loadInput', function () {
   var temp = '';
   var temp2 = loadPincode($(this).val());
   var temp3='';
-  var loop =temp2.length;
+  var loop =loadVal.length;
   if(loop>0)
   {
     temp = '<div class="loadInput_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;position: absolute;top:0;width: 350px;z-index: 100;background-color: #ffffff;height:300px;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadInput_input" style="display:none;border: 1px solid rgba(252,68,18,.3) !important;width:100%;margin-bottom:10px;" ><br>';
 
-  for(var j=0;j<temp2.length;j++)
+  for(var j=0;j<loadVal.length;j++)
   {
-    temp3 = temp3 + '<li class="loadInput_class_li" style="padding:10px 0px;cursor: pointer;font-size:14px;"  >' + temp2[i].name + '</li>'
+    temp3 = temp3 + '<li class="loadInput_class_li" style="padding:10px 0px;cursor: pointer;font-size:14px;"  >' + loadVal[i].name + '</li>'
   }
   temp = temp + '<ul class="loadInput_ul" style="list-style-type: none;margin:0;padding:0;height:250px;overflow-y:scroll;">' + temp3 + '</ul></div>';
   $('.loadInput_div').remove();
