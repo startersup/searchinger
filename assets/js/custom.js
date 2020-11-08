@@ -199,8 +199,7 @@ function setTableTime(val) {
 }
 
 function getTableTime(val) {
-  if (val == 247 || val == '247') {
-    var loop = weekDaysList.length;
+   var loop = weekDaysList.length;
     for (var i = 0; i < loop; i++) {
       var id = weekDaysList[i] + '_hrs_from';
       var id2 = weekDaysList[i] + '_mins_from';
@@ -214,7 +213,7 @@ function getTableTime(val) {
       temp = $('.' + id).val() + ':' + $('.' + id2).val();
       $('#' + inputid).val(temp);
     }
-  }
+ 
 }
 $(document).on('keyup', '.number', function () {
 
@@ -270,7 +269,7 @@ function get_url_response_input(callType, url, data) {
 }
 // $("form#").submit(function(){
 $(document).on("submit", "#businessList", function () {
-  getTableTime(val);
+  getTableTime();
   var formData = new FormData($(this)[0]);
   var Url = myUrl + 'apis/v1/business/';
   $.ajax({
