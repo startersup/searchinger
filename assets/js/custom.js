@@ -318,7 +318,7 @@ $(document).on('keyup', '.loadInput', function () {
 
   for(var j=0;j<loadVal.length;j++)
   {
-    temp3 = temp3 + '<li class="loadInput_class_li" style="padding:10px 0px;cursor: pointer;font-size:14px;"  >' + loadVal[i].name + '</li>'
+    temp3 = temp3 + '<li class="loadInput_class_li" style="padding:10px 0px;cursor: pointer;font-size:14px;"  >' + loadVal[j].name + '</li>'
   }
   temp = temp + '<ul class="loadInput_ul" style="list-style-type: none;margin:0;padding:0;height:250px;overflow-y:scroll;">' + temp3 + '</ul></div>';
   $('.loadInput_div').remove();
