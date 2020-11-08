@@ -250,6 +250,22 @@ function get_url_response(callType, url, data, func) {
 }
 
 
+
+function get_url_response_input(callType, url, data) {
+  var objData = {};
+  $.ajax({
+    type: callType,
+    url: url,
+    data: data,
+    async: false,
+    success: function (data) {
+      objData = JSON.parse(data);
+      return objData;
+    },
+    error: function (xhr) { return objData; }
+  });
+
+}
 // $("form#").submit(function(){
 $(document).on("submit", "#businessList", function () {
   getTableTime(val);
@@ -286,6 +302,36 @@ $(document).on('focus', '.loadDropdown', function () {
 
 });
 
+$(document).on('keyup', '.loadInput', function () {
+
+  $(this).blur();
+  var dropDownType = $(this).attr("drop-type");
+
+  var temp = '<div class="loadInput_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;position: absolute;top:0;width: 350px;z-index: 100;background-color: #ffffff;height:300px;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadInput_input" style="border: 1px solid rgba(252,68,18,.3) !important;width:100%;margin-bottom:10px;" ><br>';
+  var temp2 = loadPincode($(this).val());
+  var temp3='';
+  for(var j=0;j<temp2.length;j++)
+  {
+    temp3 = temp3 + '<li class="loadInput_class_li" style="padding:10px 0px;cursor: pointer;font-size:14px;"  >' + temp2[i].name + '</li>'
+  }
+  temp = temp + '<ul class="loadInput_ul" style="list-style-type: none;margin:0;padding:0;height:250px;overflow-y:scroll;">' + temp3 + '</ul></div>';
+  $('.loadInput_div').remove();
+  $(this).parent().append(temp);
+
+});
+
+function loadPincode(strVal) {
+  strVal = strVal.replace(' ', '');
+  var temp = {};
+  if (strVal.length >= 3) {
+    var url = myUrl + 'apis/v1/postcode/';
+    var data = {};
+    data["search"] = strVal;
+    temp = get_url_response_input('POST', url, data);
+
+  }
+  return temp;
+}
 function loadDropDownDiv(dropDownType, strSearch) {
   strSearch = strSearch.toLowerCase();
   var dropDownVal = dropDownList[dropDownType];
@@ -325,4 +371,20 @@ $(document).on('click', '.loadDropdown_class_li', function () {
   });
 
   $('.loadDropdown_div').remove();
+});
+
+$(document).on('click', '.loadInput_class_li', function () {
+
+  $(this).closest("div.content").find("input[name=’rank’]").val()
+  var dropDownType = $('.loadInput_div').attr("drop-type");
+  var temp =$(this).html();
+   $('.loadInput').each(function () {
+
+    if ($(this).attr("drop-type") == dropDownType) {
+      $(this).val(temp);
+    }
+
+  });
+
+  $('.loadInput_div').remove();
 });
