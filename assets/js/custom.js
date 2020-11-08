@@ -304,10 +304,9 @@ $(document).on('focus', '.loadDropdown', function () {
 
 $(document).on('keyup', '.loadInput', function () {
 
-  $(this).blur();
   var dropDownType = $(this).attr("drop-type");
 
-  var temp = '<div class="loadInput_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;position: absolute;top:0;width: 350px;z-index: 100;background-color: #ffffff;height:300px;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadInput_input" style="border: 1px solid rgba(252,68,18,.3) !important;width:100%;margin-bottom:10px;" ><br>';
+  var temp = '<div class="loadInput_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;position: absolute;top:0;width: 350px;z-index: 100;background-color: #ffffff;height:300px;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadInput_input" style="display:none;border: 1px solid rgba(252,68,18,.3) !important;width:100%;margin-bottom:10px;" ><br>';
   var temp2 = loadPincode($(this).val());
   var temp3='';
   for(var j=0;j<temp2.length;j++)
@@ -376,7 +375,7 @@ $(document).on('click', '.loadDropdown_class_li', function () {
 $(document).on('click', '.loadInput_class_li', function () {
 
   $(this).closest("div.content").find("input[name=’rank’]").val()
-  var dropDownType = $('.loadInput_div').attr("drop-type");
+  var dropDownType = $('.loadInput_input').attr("drop-type");
   var temp =$(this).html();
    $('.loadInput').each(function () {
 
