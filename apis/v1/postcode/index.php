@@ -30,7 +30,7 @@ $path=$link."://". $_SERVER['HTTP_HOST']."/";
 include($rootfolder.'/connection/connection.php');
 
 $search = $_POST["search"];
-$sql = "SELECT TOP 10 `post_code` AS name FROM `post_codes` WHERE `search_code` like '".$search."%'";
+$sql = "SELECT  `post_code` AS name FROM `post_codes` WHERE `search_code` like '".$search."%' LIMIT 10 ";
 $result =  mysqli_query($conn, $sql);
 
 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
