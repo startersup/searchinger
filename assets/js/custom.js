@@ -260,7 +260,7 @@ function get_url_response_input(callType, url, data) {
     async: false,
     success: function (data) {
       objData = JSON.parse(data);
-      return objData;
+      return (objData.data);
     },
     error: function (xhr) { return objData; }
   });
