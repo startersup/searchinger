@@ -61,6 +61,7 @@ $sqlVals = str_replace("`toberepcust` ,", "", $sqlVals);
 $sql .= $sqlCols . ") VALUES " . $sqlVals . ")";
 $response["sql"]=$sql;
 $response["sql"] = $sql;
+$response["connect"]=$conn;
 if($conn)
 {
 $result =  mysqli_query($conn, $sql);
@@ -113,7 +114,7 @@ if ($result) {
     
 }
 else{
-    $response["msg"] = "First Insert Fail .... ".$conn;
+    $response["msg"] = $conn;
 }
 
 }else{
