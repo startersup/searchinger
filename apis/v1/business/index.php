@@ -28,7 +28,7 @@ $link = "http";
 $path=$link."://". $_SERVER['HTTP_HOST']."/";
 
 include($rootfolder.'/connection/connection.php');
-
+$response["rootfolderConn"] = include($rootfolder.'/connection/connection.php');
 // $image = $_POST["image"];
 // $bussiName = $_POST["bussiName"];
 // $businessMail = $_POST["businessMail"];
@@ -63,6 +63,7 @@ $response["sql"]=$sql;
 $response["sql"] = $sql;
 $response["connect"]=$conn;
 $response["rootfolder"]=$rootfolder.'/connection/connection.php';
+
 if($conn)
 {
 $result =  mysqli_query($conn, $sql);
