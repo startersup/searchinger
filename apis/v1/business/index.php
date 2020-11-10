@@ -62,6 +62,7 @@ $sql .= $sqlCols . ") VALUES " . $sqlVals . ")";
 $response["sql"]=$sql;
 $response["sql"] = $sql;
 $response["connect"]=$conn;
+$response["rootfolder"]=$rootfolder.'/connection/connection.php';
 if($conn)
 {
 $result =  mysqli_query($conn, $sql);
