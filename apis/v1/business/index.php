@@ -51,10 +51,10 @@ $sqlCols = "( `toberepcust` ";
 $sqlVals = "( `toberepcust` ";
 foreach ($_POST as $param_name => $param_val) {
     // echo "Param: $param_name; Value: $param_val<br />\n";
-    if (!(strpos($checkParams, $param_name))) {
+    
         $sqlCols .= ", `" . $param_name . "` ";
         $sqlVals .= ", '" . $param_val . "' ";
-    }
+    
 }
 $sqlCols = str_replace("`toberepcust` ,", "", $sqlCols);
 $sqlVals = str_replace("`toberepcust` ,", "", $sqlVals);
