@@ -475,13 +475,14 @@ position: relative;
       
           button.sng-action-btn
           {
-            border: 1.5px solid #cfc9d8;
-            color:#565656;
-              background-color:transparent;
-              border-radius:3px;
-              padding:5px 20px;
-              margin: 2px 5px;
-              font-size:13px;
+            border: 1.5px solid #5c3696;
+            color: #ffffff;
+            background-color: #5c3696;
+            border-radius: 3px;
+            padding: 5px 10px;
+            margin: 2px 5px;
+            font-size: 12px;
+            outline:none;
 
               &:hover
               {
