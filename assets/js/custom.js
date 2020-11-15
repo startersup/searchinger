@@ -278,7 +278,11 @@ $(document).on("submit", "#businessList", function () {
     data: formData,
     async: false,
     success: function (data) {
-      alert(data)
+      var resObj = JSON.parse(data);
+      if(resultStatus(resObj))
+      {
+        alert(resObj.msg);
+      }
     },
     enctype: 'multipart/form-data',
     cache: false,
@@ -289,7 +293,16 @@ $(document).on("submit", "#businessList", function () {
   return false;
 });
 
-
+function resultStatus()
+{
+  var status =false;
+  if(resObj.status == 1 || resObj.status == '1' || resObj.status.toLowerCase == 'true' || resObj.status == true 
+  || resObj.status.toLowerCase == 'success')
+  {
+    status=true;
+  }
+  return status;
+}
 $(document).on('focus', '.loadDropdown', function () {
 
   $(this).blur();
