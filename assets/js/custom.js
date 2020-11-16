@@ -5,7 +5,7 @@ var myUrl = myProtocol + "//" + mySite + "/";
 var loadVal={};
 var dropDownList = {
   "businessCategory": [
-    { "id": 1, "name": "All Categories" },
+   // { "id": 1, "name": "All Categories" },
     { "id": 2, "name": "Arts" },
     { "id": 3, "name": "Business" },
     { "id": 4, "name": "Computer" },
@@ -282,6 +282,7 @@ $(document).on("submit", "#businessList", function () {
       if(resultStatus(resObj))
       {
         alert(resObj.msg);
+        clea
       }
     },
     enctype: 'multipart/form-data',
@@ -293,7 +294,7 @@ $(document).on("submit", "#businessList", function () {
   return false;
 });
 
-function resultStatus()
+function resultStatus(resObj)
 {
   var status =false;
   if(resObj.status == 1 || resObj.status == '1' || resObj.status.toLowerCase == 'true' || resObj.status == true 
