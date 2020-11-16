@@ -7,7 +7,7 @@ $result =  mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $totalBusinessList = $row["totalCount"];
 
-echo( $totalBusinessList );
+echo( $sql );
 
 echo("<h3>Total Business Enrolled => $totalBusinessList </h3>");
 
