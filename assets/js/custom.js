@@ -319,7 +319,7 @@ $(document).on('click', function (e) {
     $(".loadInput_div").hide();
   }
 
-  if ($(e.target).closest(".loadDropdown_div").length === 0) {
+  if ( $(e.target).closest(".loadDropdown_div").length === 0 && $(e.target).closest(".loadDropdown").length === 0) {
     $(".loadDropdown_div").hide();
   }
 });
