@@ -9,7 +9,7 @@ $result =  mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $totalBusinessList = $row["totalCount"];
 
-echo($result);
+// echo($result);
 if($result)
 {
     echo("<br> success result");
