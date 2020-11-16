@@ -2,10 +2,10 @@
 var myProtocol = window.location.protocol;
 var mySite = window.location.host;
 var myUrl = myProtocol + "//" + mySite + "/";
-var loadVal={};
+var loadVal = {};
 var dropDownList = {
   "businessCategory": [
-   // { "id": 1, "name": "All Categories" },
+    // { "id": 1, "name": "All Categories" },
     { "id": 2, "name": "Arts" },
     { "id": 3, "name": "Business" },
     { "id": 4, "name": "Computer" },
@@ -199,21 +199,21 @@ function setTableTime(val) {
 }
 
 function getTableTime(val) {
-   var loop = weekDaysList.length;
-    for (var i = 0; i < loop; i++) {
-      var id = weekDaysList[i] + '_hrs_from';
-      var id2 = weekDaysList[i] + '_mins_from';
-      var inputid = weekDaysList[i] + 'Start';
-      var temp = $('.' + id).val() + ':' + $('.' + id2).val();
-      $('#' + inputid).val(temp);
+  var loop = weekDaysList.length;
+  for (var i = 0; i < loop; i++) {
+    var id = weekDaysList[i] + '_hrs_from';
+    var id2 = weekDaysList[i] + '_mins_from';
+    var inputid = weekDaysList[i] + 'Start';
+    var temp = $('.' + id).val() + ':' + $('.' + id2).val();
+    $('#' + inputid).val(temp);
 
-      id = weekDaysList[i] + '_hrs_to';
-      id2 = weekDaysList[i] + '_mins_to';
-      inputid = weekDaysList[i] + 'End';
-      temp = $('.' + id).val() + ':' + $('.' + id2).val();
-      $('#' + inputid).val(temp);
-    }
- 
+    id = weekDaysList[i] + '_hrs_to';
+    id2 = weekDaysList[i] + '_mins_to';
+    inputid = weekDaysList[i] + 'End';
+    temp = $('.' + id).val() + ':' + $('.' + id2).val();
+    $('#' + inputid).val(temp);
+  }
+
 }
 $(document).on('keyup', '.number', function () {
 
@@ -260,7 +260,7 @@ function get_url_response_input(callType, url, data) {
     async: false,
     success: function (data) {
       objData = JSON.parse(data);
-      loadVal= (objData.data);
+      loadVal = (objData.data);
       console.log(loadVal);
     },
     error: function (xhr) { return objData; }
@@ -279,8 +279,7 @@ $(document).on("submit", "#businessList", function () {
     async: false,
     success: function (data) {
       var resObj = JSON.parse(data);
-      if(resultStatus(resObj))
-      {
+      if (resultStatus(resObj)) {
         alert(resObj.msg);
         clea
       }
@@ -294,13 +293,11 @@ $(document).on("submit", "#businessList", function () {
   return false;
 });
 
-function resultStatus(resObj)
-{
-  var status =false;
-  if(resObj.status == 1 || resObj.status == '1' || resObj.status.toLowerCase == 'true' || resObj.status == true 
-  || resObj.status.toLowerCase == 'success')
-  {
-    status=true;
+function resultStatus(resObj) {
+  var status = false;
+  if (resObj.status == 1 || resObj.status == '1' || resObj.status.toLowerCase == 'true' || resObj.status == true
+    || resObj.status.toLowerCase == 'success') {
+    status = true;
   }
   return status;
 }
@@ -317,25 +314,34 @@ $(document).on('focus', '.loadDropdown', function () {
 
 });
 
+$(document).on('click', function (e) {
+  if ($(e.target).closest(".loadInput_div").length === 0) {
+    $(".loadInput_div").hide();
+  }
+
+  if ($(e.target).closest(".loadDropdown_div").length === 0) {
+    $(".loadDropdown_div").hide();
+  }
+});
+
+
 $(document).on('keyup', '.loadInput', function () {
 
   var dropDownType = $(this).attr("drop-type");
 
   var temp = '';
   var temp2 = loadPincode($(this).val());
-  var temp3='';
-  var loop =loadVal.length;
-  if(loop>0)
-  {
-    temp = '<div class="loadInput_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;position: absolute;top:0;width: 350px;z-index: 100;background-color: #ffffff;height:300px;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadInput_input" style="display:none;border: 1px solid rgba(252,68,18,.3) !important;width:100%;margin-bottom:10px;" ><br>';
+  var temp3 = '';
+  var loop = loadVal.length;
+  if (loop > 0) {
+    temp = '<div class="loadInput_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;top:0;width: 350px;z-index: 100;background-color: #ffffff;height:300px;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadInput_input" style="display:none;border: 1px solid rgba(252,68,18,.3) !important;width:100%;margin-bottom:10px;" ><br>';
 
-  for(var j=0;j<loadVal.length;j++)
-  {
-    temp3 = temp3 + '<li class="loadInput_class_li" style="padding:10px 0px;cursor: pointer;font-size:14px;"  >' + loadVal[j].name + '</li>'
-  }
-  temp = temp + '<ul class="loadInput_ul" style="list-style-type: none;margin:0;padding:0;height:250px;overflow-y:scroll;">' + temp3 + '</ul></div>';
-  $('.loadInput_div').remove();
-  $(this).parent().append(temp);
+    for (var j = 0; j < loadVal.length; j++) {
+      temp3 = temp3 + '<li class="loadInput_class_li" style="padding:10px 0px;cursor: pointer;font-size:14px;"  >' + loadVal[j].name + '</li>'
+    }
+    temp = temp + '<ul class="loadInput_ul" style="list-style-type: none;margin:0;padding:0;height:250px;overflow-y:scroll;">' + temp3 + '</ul></div>';
+    $('.loadInput_div').remove();
+    $(this).parent().append(temp);
   }
 });
 
@@ -396,8 +402,8 @@ $(document).on('click', '.loadInput_class_li', function () {
 
   $(this).closest("div.content").find("input[name=’rank’]").val()
   var dropDownType = $('.loadInput_input').attr("drop-type");
-  var temp =$(this).html();
-   $('.loadInput').each(function () {
+  var temp = $(this).html();
+  $('.loadInput').each(function () {
 
     if ($(this).attr("drop-type") == dropDownType) {
       $(this).val(temp);
