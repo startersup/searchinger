@@ -6,23 +6,18 @@ include($rootfolder.'/connection/connection.php');
 
 $sql="SELECT count(id) as totalCount from bussinessList ";
 $result =  mysqli_query($conn, $sql);
-$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-$totalBusinessList = $row["totalCount"];
-
-// echo($result);
-if($result)
+if($row = mysqli_fetch_array($result, MYSQLI_ASSOC))
 {
-    echo("<br> success result");
+    $totalBusinessList = $row["totalCount"];
 }
 
-
-// echo("<h3>Total Business Enrolled => $totalBusinessList </h3>");
+ echo("<h3>Total Business Enrolled => $totalBusinessList </h3>");
 
 $sql="SELECT count(id) as totalCount from imageServer ";
 $result =  mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $totalImageServer = $row["totalCount"];
 
-// echo("<h3>Total Business Images => $totalImageServer </h3>");
+echo("<h3>Total Business Images => $totalImageServer </h3>");
 
 ?>
