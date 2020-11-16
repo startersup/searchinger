@@ -1,7 +1,9 @@
 <?php
 
-include("./connection/connection.php");
-$temp = include("./connection/connection.php");
+$rootfolder = $_SERVER['DOCUMENT_ROOT'];
+
+include($rootfolder.'/connection/connection.php');
+$temp = include($rootfolder.'/connection/connection.php');
 echo($temp);
 $sql="SELECT count(id) as totalCount from bussinessList ";
 $result =  mysqli_query($conn, $sql);
