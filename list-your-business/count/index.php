@@ -1,13 +1,13 @@
 <?php
 
 include("./connection/connection.php");
-
+echo(include("./connection/connection.php"));
 $sql="SELECT count(id) as totalCount from bussinessList ";
 $result =  mysqli_query($conn, $sql);
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 $totalBusinessList = $row["totalCount"];
-
-echo( $sql );
+echo("<br>");
+echo( $conn );
 
 echo("<h3>Total Business Enrolled => $totalBusinessList </h3>");
 
