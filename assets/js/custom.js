@@ -269,7 +269,11 @@ function get_url_response_input(callType, url, data) {
 }
 // $("form#").submit(function(){
 $(document).on("submit", "#businessList", function () {
+
+  setTimeout(function () {
+
   $('.loader').show();
+  },400);
   getTableTime();
   var formData = new FormData($(this)[0]);
   var Url = myUrl + 'apis/v1/business/';
