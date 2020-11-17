@@ -298,7 +298,11 @@ $(document).on("submit", "#businessList", function () {
         $('.alert-danger').show();     
         alert(resObj.msg);
       }
-      $('.loader').hide();
+      
+      setTimeout(function () {
+
+        $('.loader').hide();
+        },400);
     },
     enctype: 'multipart/form-data',
     cache: false,
