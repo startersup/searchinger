@@ -269,6 +269,7 @@ function get_url_response_input(callType, url, data) {
 }
 // $("form#").submit(function(){
 $(document).on("submit", "#businessList", function () {
+  $('.loader').show();
   getTableTime();
   var formData = new FormData($(this)[0]);
   var Url = myUrl + 'apis/v1/business/';
@@ -280,9 +281,20 @@ $(document).on("submit", "#businessList", function () {
     success: function (data) {
       var resObj = JSON.parse(data);
       if (resultStatus(resObj)) {
+        $('.alert-success-msg').html(resObj.msg);
+        $('.alert-danger').hide();
+        $('.alert-success').show(); 
+        clearTableTime();
+        $('.form-control').val('');
+
+      }else
+      {
+        $('.alert-danger-msg').html(resObj.msg);
+        $('.alert-success').hide(); 
+        $('.alert-danger').show();     
         alert(resObj.msg);
-        clea
       }
+      $('.loader').hide();
     },
     enctype: 'multipart/form-data',
     cache: false,
