@@ -447,3 +447,52 @@ $(document).on('click', '.loadInput_class_li', function () {
 
   $('.loadInput_div').remove();
 });
+
+function customsetTable()
+{
+  $('#workingFullHours').val('0');
+   
+  var id = weekDaysList[0] + '_hrs_from';
+   var hrs_from = $('.' + id).val();
+   id = weekDaysList[0] + '_mins_from';
+  var mins_from= $('.' + id).val();
+
+   id = weekDaysList[0] + '_hrs_to';
+   var hrs_to = $('.' + id).val();
+   id = weekDaysList[0] + '_mins_to';
+   var mins_to = $('.' + id).val();
+ 
+        id = weekDaysList[5] + '_hrs_from';
+   $('.' + id).val('00');
+   id = weekDaysList[5] + '_mins_from';
+   $('.' + id).val('00');
+
+   id = weekDaysList[5] + '_hrs_to';
+   $('.' + id).val('00');
+   id = weekDaysList[5] + '_mins_to';
+   $('.' + id).val('00');
+ 
+        id = weekDaysList[6] + '_hrs_from';
+   $('.' + id).val('00');
+   id = weekDaysList[6] + '_mins_from';
+   $('.' + id).val('00');
+
+   id = weekDaysList[6] + '_hrs_to';
+   $('.' + id).val('00');
+   id = weekDaysList[6] + '_mins_to';
+   $('.' + id).val('00');
+ 
+ var loop = (weekDaysList.length-2);
+ for (var i = 1; i < loop; i++) {
+   id = weekDaysList[i] + '_hrs_from';
+   $('.' + id).val(hrs_from);
+   id = weekDaysList[i] + '_mins_from';
+   $('.' + id).val(mins_from);
+
+   id = weekDaysList[i] + '_hrs_to';
+   $('.' + id).val(hrs_to);
+   id = weekDaysList[i] + '_mins_to';
+   $('.' + id).val(mins_to);
+
+ }
+}
