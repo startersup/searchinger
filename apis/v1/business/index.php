@@ -53,7 +53,7 @@ foreach ($_POST as $param_name => $param_val) {
     // echo "Param: $param_name; Value: $param_val<br />\n";
     
         $sqlCols .= ", `" . $param_name . "` ";
-        $sqlVals .= ", '" . $param_val . "' ";
+        $sqlVals .= ", '" . addslashes($param_val) . "' ";
     
 }
 $sqlCols = str_replace("`toberepcust` ,", "", $sqlCols);
