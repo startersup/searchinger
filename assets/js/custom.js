@@ -3,7 +3,7 @@ var myProtocol = window.location.protocol;
 var mySite = window.location.host;
 var myUrl = myProtocol + "//" + mySite + "/";
 var loadVal = {};
-var defaultValue='';
+var defaultValue = '';
 var dropDownList = {
   "businessCategory": [
     // { "id": 1, "name": "All Categories" },
@@ -273,8 +273,8 @@ $(document).on("submit", "#businessList", function () {
 
   setTimeout(function () {
 
-  $('.loader').show();
-  },400);
+    $('.loader').show();
+  }, 400);
   getTableTime();
   var formData = new FormData($(this)[0]);
   var Url = myUrl + 'apis/v1/business/';
@@ -288,24 +288,23 @@ $(document).on("submit", "#businessList", function () {
       if (resultStatus(resObj)) {
         $('.alert-success-msg').html(resObj.msg);
         $('.alert-danger').hide();
-        $('.alert-success').show(); 
+        $('.alert-success').show();
         $('#fileToUpload').val('');
-        $('#businessLogo').attr("src",'../assets/images/sng-alt-img.png');
+        $('#businessLogo').attr("src", '../assets/images/sng-alt-img.png');
         clearTableTime();
         $('.form-control').val('');
 
-      }else
-      {
+      } else {
         $('.alert-danger-msg').html(resObj.msg);
-        $('.alert-success').hide(); 
-        $('.alert-danger').show();     
+        $('.alert-success').hide();
+        $('.alert-danger').show();
         alert(resObj.msg);
       }
-      
+
       setTimeout(function () {
 
         $('.loader').hide();
-        },400);
+      }, 400);
     },
     enctype: 'multipart/form-data',
     cache: false,
@@ -328,7 +327,7 @@ $(document).on('focus', '.loadDropdown', function () {
 
   $(this).blur();
   var dropDownType = $(this).attr("drop-type");
- defaultValue=$(this).html();
+  defaultValue = $(this).html();
 
   var temp = '<div class="loadDropdown_div" style=" box-shadow: 0 3px 20px rgba(0,0,0,.2);border-radius: .25rem;padding: 15px;top:0;width: 350px;z-index: 100;background-color: #ffffff;height:300px;" ><input type="text" value="" drop-type="' + dropDownType + '" class="loadDropdown_input" style="border: 1px solid rgba(252,68,18,.3) !important;width:100%;margin-bottom:10px;" ><br>';
   var temp2 = loadDropDownDiv(dropDownType, 'a');
@@ -343,16 +342,16 @@ $(document).on('click', function (e) {
     $(".loadInput_div").hide();
   }
 
-  if ( $(e.target).closest(".loadDropdown_div").length === 0 && $(e.target).closest(".loadDropdown").length === 0) {
+  if ($(e.target).closest(".loadDropdown_div").length === 0 && $(e.target).closest(".loadDropdown").length === 0) {
     var dropDownType = $('.loadDropdown_input').attr("drop-type");
-  $('.loadDropdown').each(function () {
+    $('.loadDropdown').each(function () {
 
-    if ($(this).attr("drop-type") == dropDownType) {
-      $(this).html(defaultValue);
-    }
+      if ($(this).attr("drop-type") == dropDownType) {
+        $(this).html(defaultValue);
+      }
 
-  });
-  defaultValue='';
+    });
+    defaultValue = '';
     $(".loadDropdown_div").hide();
   }
 });
@@ -429,7 +428,7 @@ $(document).on('click', '.loadDropdown_class_li', function () {
   });
 
   $('.loadDropdown_div').remove();
-  defaultValue='';
+  defaultValue = '';
 });
 
 $(document).on('click', '.loadInput_class_li', function () {
@@ -448,51 +447,50 @@ $(document).on('click', '.loadInput_class_li', function () {
   $('.loadInput_div').remove();
 });
 
-function customsetTable()
-{
+function customsetTable() {
   $('#workingFullHours').val('0');
-   
+
   var id = weekDaysList[0] + '_hrs_from';
-   var hrs_from = $('.' + id).val();
-   id = weekDaysList[0] + '_mins_from';
-  var mins_from= $('.' + id).val();
+  var hrs_from = $('.' + id).val();
+  id = weekDaysList[0] + '_mins_from';
+  var mins_from = $('.' + id).val();
 
-   id = weekDaysList[0] + '_hrs_to';
-   var hrs_to = $('.' + id).val();
-   id = weekDaysList[0] + '_mins_to';
-   var mins_to = $('.' + id).val();
- 
-        id = weekDaysList[5] + '_hrs_from';
-   $('.' + id).val('00');
-   id = weekDaysList[5] + '_mins_from';
-   $('.' + id).val('00');
+  id = weekDaysList[0] + '_hrs_to';
+  var hrs_to = $('.' + id).val();
+  id = weekDaysList[0] + '_mins_to';
+  var mins_to = $('.' + id).val();
 
-   id = weekDaysList[5] + '_hrs_to';
-   $('.' + id).val('00');
-   id = weekDaysList[5] + '_mins_to';
-   $('.' + id).val('00');
- 
-        id = weekDaysList[6] + '_hrs_from';
-   $('.' + id).val('00');
-   id = weekDaysList[6] + '_mins_from';
-   $('.' + id).val('00');
+  id = weekDaysList[5] + '_hrs_from';
+  $('.' + id).val('00');
+  id = weekDaysList[5] + '_mins_from';
+  $('.' + id).val('00');
 
-   id = weekDaysList[6] + '_hrs_to';
-   $('.' + id).val('00');
-   id = weekDaysList[6] + '_mins_to';
-   $('.' + id).val('00');
- 
- var loop = (weekDaysList.length-2);
- for (var i = 1; i < loop; i++) {
-   id = weekDaysList[i] + '_hrs_from';
-   $('.' + id).val(hrs_from);
-   id = weekDaysList[i] + '_mins_from';
-   $('.' + id).val(mins_from);
+  id = weekDaysList[5] + '_hrs_to';
+  $('.' + id).val('00');
+  id = weekDaysList[5] + '_mins_to';
+  $('.' + id).val('00');
 
-   id = weekDaysList[i] + '_hrs_to';
-   $('.' + id).val(hrs_to);
-   id = weekDaysList[i] + '_mins_to';
-   $('.' + id).val(mins_to);
+  id = weekDaysList[6] + '_hrs_from';
+  $('.' + id).val('00');
+  id = weekDaysList[6] + '_mins_from';
+  $('.' + id).val('00');
 
- }
+  id = weekDaysList[6] + '_hrs_to';
+  $('.' + id).val('00');
+  id = weekDaysList[6] + '_mins_to';
+  $('.' + id).val('00');
+
+  var loop = (weekDaysList.length - 2);
+  for (var i = 1; i < loop; i++) {
+    id = weekDaysList[i] + '_hrs_from';
+    $('.' + id).val(hrs_from);
+    id = weekDaysList[i] + '_mins_from';
+    $('.' + id).val(mins_from);
+
+    id = weekDaysList[i] + '_hrs_to';
+    $('.' + id).val(hrs_to);
+    id = weekDaysList[i] + '_mins_to';
+    $('.' + id).val(mins_to);
+
+  }
 }
