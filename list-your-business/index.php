@@ -141,14 +141,14 @@ include($rootfolder.'/navBar.php');
                 <div class="form-group">
                   <label for="BusinessName">Business Category<sup>*</sup></label>
                   <!-- <input type="name" name="businessCategory" class="form-control sng-form-inputs" autocomplete="off" required="required" placeholder="Eg: Travel, Architecture" id="businessCategory"> -->
-                  <select class="loadDropdown form-control sng-form-inputs " drop-type="businessCategory"></select>
+                  <select class="loadDropdown form-control sng-form-inputs "  name="businessCategory" drop-type="businessCategory"></select>
 
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
                   <label for="BusinessName">Business SubCategory<sup>*</sup></label>
-                  <input type="name" name="businessCategory" class="form-control sng-form-inputs" autocomplete="off"
+                  <input type="name" name="businessSubCategory" class="form-control sng-form-inputs" autocomplete="off"
                     required="required" placeholder="Eg: Taxi service, Builder" id="businessCategory">
                 </div>
               </div>
@@ -161,12 +161,12 @@ include($rootfolder.'/navBar.php');
               </div>
               <div class="col-md-6">
                 <label for="BusinessName">City<sup>*</sup></label>
-                <input type="name" name="businessCategory" class="form-control sng-form-inputs" autocomplete="off"
+                <input type="name" name="businessCity" class="form-control sng-form-inputs" autocomplete="off"
                   required="required" placeholder="Eg: London, Manchester, Oxford " id="businessCategory">
               </div>
               <div class="col-md-6">
                 <label for="BusinessName">Postal Code<sup>*</sup></label>
-                <input type="name" name="businessCategory" class="form-control sng-form-inputs loadInput" drop-type="abc" autocomplete="off"
+                <input type="name" name="businessPostalCode" class="form-control sng-form-inputs loadInput" drop-type="abc" autocomplete="off"
                   required="required" placeholder="Eg: N4 1AL " id="businessCategory">
               </div>
             </div>
