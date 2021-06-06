@@ -30,7 +30,7 @@ var dropDownList = {
     { "id": 22, "name": "Recreation" },
     { "id": 23, "name": "Reference" },
     { "id": 24, "name": "Regional" },
-    { "id": 25, "name": "SAAS" },
+    { "id": 25, "name": "SaaS" },
     { "id": 26, "name": "Science" },
     { "id": 27, "name": "SEO Services" },
     { "id": 28, "name": "Shopping" },
@@ -40,7 +40,6 @@ var dropDownList = {
     { "id": 32, "name": "Travel" },
     { "id": 33, "name": "Waste Clearance" },
     { "id": 34, "name": "Web Directory" }
-
   ]
 };
 
