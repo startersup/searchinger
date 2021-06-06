@@ -250,6 +250,353 @@ $rootfolder = $_SERVER['DOCUMENT_ROOT'];
           </div>
         </div>
 
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sng-result-card">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="sng-logo"
+                src="https://breakthrough.org/wp-content/uploads/2018/10/default-placeholder-image.png">
+            </div>
+            <div class="col-md-7">
+              <h4>Britannia Taxis Pvt Ltd</h4>
+              <p>No:12, walnut lane, crawley, west sussex</p>
+              <div class="sng-action-bar">
+                <button class="sng-action-btn">Call Us</button>
+                <button class="sng-action-btn">Send Email </button>
+                <button class="sng-action-btn">Visit Website</button>
+              </div>
+
+            </div>
+            <div class="col-md-1">
+              <div class="sng-star-rating-bar">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star"></span>
+                <p><span>100 Average Reviews</span></p>
+              </div>
+              <div class="sng-social-bar">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-google"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
       <div class="col-md-4">
       <div id='map' style='width: 400px; height: 600px; position:sticky; top:50px;'></div>
