@@ -252,7 +252,7 @@ $rootfolder = $_SERVER['DOCUMENT_ROOT'];
 
       </div>
       <div class="col-md-4">
-      <div id='map' style='width: 400px; height: 800px;'></div>
+      <div id='map' style='width: 400px; height: 600px; position:sticky; top:50px;'></div>
       </div>
     </div>
 
