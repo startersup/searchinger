@@ -12,19 +12,17 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="#">Home</a></li>
           <li class="dropdown sng-dropdown">
-            <a class="dropdown-toggle custom-arrow" href="#">Categories</a>
+            <a class="navDropdownOpen dropdown-toggle custom-arrow" name="businessCategory" drop-type="businessCategory">Categories</a>
             <div class="sng-dropdown-content">
-             <ul>
-             <li class="loadDropdown" name="businessCategory"></li>  
-             </ul>
+          
             </div>
           </li>
-          <li class="dropdown sng-dropdown">
+          <!-- <li class="dropdown sng-dropdown">
             <a class="dropdown-toggle custom-arrow" href="#">COVID-19 Essentials</a>
             <div class="sng-dropdown-content">
 
             </div>
-          </li>
+          </li> -->
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li><a href="./list-your-business/" class="sng-free-business">+ List your Business</a></li>

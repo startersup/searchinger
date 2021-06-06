@@ -336,6 +336,7 @@ $(document).on('focus', '.loadDropdown', function () {
 
 });
 
+
 $(document).on('click', function (e) {
   if ($(e.target).closest(".loadInput_div").length === 0) {
     $(".loadInput_div").hide();
