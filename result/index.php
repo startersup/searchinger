@@ -613,7 +613,7 @@ $rootfolder = $_SERVER['DOCUMENT_ROOT'];
 var map = new mapboxgl.Map({
 container: 'map',
 style: 'mapbox://styles/mapbox/streets-v11',
-center: [-74.5, 40],
+center: [51.5074, 0.1278],
 zoom: 9
 });
 map.addControl(new mapboxgl.NavigationControl());
