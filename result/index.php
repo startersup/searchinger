@@ -599,7 +599,7 @@ $rootfolder = $_SERVER['DOCUMENT_ROOT'];
 
       </div>
       <div class="col-md-4">
-      <div id='map' style='width: 400px; height: 600px; position:sticky; top:50px;'></div>
+      <div id='map' style='width: 400px; height: 600px; position:fixed;right:100px;top:100px;'></div>
       </div>
     </div>
 
@@ -608,11 +608,14 @@ $rootfolder = $_SERVER['DOCUMENT_ROOT'];
   </section>
 
 </body>
-  <script>
-mapboxgl.accessToken = 'pk.eyJ1Ijoic2VhcmNoaW5nZXIiLCJhIjoiY2twa3Q2dXh6MDFtODJvcnYzNHgwMGlrMyJ9.wnqY8vZ2ibXY_GTcCm-dmA';
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1Ijoic2VhcmNoaW5nZXIiLCJhIjoiY2twa3Q2dXh6MDFtODJvcnYzNHgwMGlrMyJ9.wnqY8vZ2ibXY_GTcCm-dmA';
 var map = new mapboxgl.Map({
 container: 'map',
-style: 'mapbox://styles/mapbox/streets-v11'
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-74.5, 40],
+zoom: 9
 });
+map.addControl(new mapboxgl.NavigationControl());
 </script>
 </html>
